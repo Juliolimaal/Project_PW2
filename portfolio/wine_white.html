@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Wine White</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../js/cart.js" defer></script>
   <link
     href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:wght@400;700&family=Lexend+Exa:wght@100..900&display=swap"
     rel="stylesheet">
@@ -55,6 +56,15 @@
       <div class="w-8 h-[2px] bg-[#A7AA37] mb-2 transition-all"></div>
       <div class="w-8 h-[2px] bg-[#A7AA37] transition-all"></div>
     </div>
+
+    <div class="relative cursor-pointer" id="cart-icon" title="Ver carrinho">
+  <span class="material-symbols-outlined text-[#A7AA37] text-3xl">shopping_cart</span>
+  <span id="cart-count"
+        class="absolute -top-2 -right-2 bg-[#A7AA37] text-white text-xs rounded-full px-2 py-[1px]">
+    0
+  </span>
+    </div>
+
   </nav>
 
   <ul id="nav-list"
@@ -103,9 +113,11 @@
           </p>
           <div class="flex gap-5 md:gap-10">
             <div
-              class="flex gap-2.5 bg-[#A7AA37] text-white px-8 py-2.5 transition duration-500 hover:bg-white hover:text-[#A7AA37] hover:border hover:border-[#A7AA37]">
-              <span class="material-symbols-outlined">shopping_bag</span>
-              <a>comprar</a>
+              class="flex gap-2.5 bg-[#A7AA37] text-white px-8 py-2.5 transition duration-500 hover:bg-white hover:text-[#A7AA37] hover:border hover:border-[#A7AA37] ... add-to-cart-btn cursor-pointer"
+              data-name="Brisa do Vale" 
+              data-price="999.99">
+                <span class="material-symbols-outlined">shopping_bag</span>
+                <a>comprar</a>
             </div>
             <div class="group flex gap-2.5 text-[#A7AA37] px-8 py-2.5 transition-all duration-500">
               <span class="material-symbols-outlined">reviews</span>
@@ -143,7 +155,10 @@
             celebração.
           </p>
           <div class="flex gap-[20px] md:gap-[40px] lg:gap-[40px]">
-            <div class="flex gap-[10px] bg-[#A7AA37] text-white px-[30px] py-[10px] transition duration-500 hover:bg-white hover:text-[#A7AA37] hover:border hover:border-[#A7AA37]">
+            <div 
+            class="flex gap-2.5 bg-[#A7AA37] text-white px-8 py-2.5 transition duration-500 hover:bg-white hover:text-[#A7AA37] hover:border hover:border-[#A7AA37] ... add-to-cart-btn cursor-pointer"
+              data-name="Alvorecer Dourado" 
+              data-price="1000.00">
               <span class="material-symbols-outlined">shopping_bag</span>
               <a>comprar</a>
             </div>
@@ -171,7 +186,10 @@
             celebrar com requinte.
           </p>
           <div class="flex gap-[20px] lg:gap-[40px]">
-            <div class="flex gap-[10px] bg-[#A7AA37] text-white px-[30px] py-[10px] transition duration-500 hover:bg-white hover:text-[#A7AA37] hover:border hover:border-[#A7AA37]">
+            <div 
+            class="flex gap-2.5 bg-[#A7AA37] text-white px-8 py-2.5 transition duration-500 hover:bg-white hover:text-[#A7AA37] hover:border hover:border-[#A7AA37] ... add-to-cart-btn cursor-pointer"
+              data-name="Vera Régia" 
+              data-price="2000.00">
               <span class="material-symbols-outlined">shopping_bag</span>
               <a>comprar</a>
             </div>
@@ -273,5 +291,21 @@
         mirror: true
     });
   </script>
+  <!-- Painel do Carrinho -->
+<div id="cart-panel"
+     class="fixed right-8 top-28 w-75 max-h-[70vh] h-auto bg-white shadow-2xl p-5 rounded-lg transform translate-x-[calc(100%+2rem)] transition-transform duration-300 z-50 overflow-y-auto">
+     <button id="close-cart-btn" class="absolute top-4 right-5 text-gray-600 text-2xl hover:text-gray-900">&times;</button>
+  <h2 class="text-2xl font-lexend mb-4 text-[#A7AA37]">Carrinho</h2>
+  
+  <ul id="cart-items" class="space-y-3"></ul>
+  <div class="border-t border-gray-300 mt-4 pt-4">
+    <p id="cart-total" class="text-lg font-semibold">Total: R$ 0,00</p>
+    <button id="clear-cart"
+            class="mt-4 bg-[#A7AA37] text-white px-4 py-2 rounded hover:bg-[#888b2c] transition duration-300">
+      Esvaziar carrinho
+    </button>
+  </div>
+</div>
+
 </body>
 </html>
