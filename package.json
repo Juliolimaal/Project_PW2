@@ -1,24 +1,13 @@
 {
-  "name": "project_pw2",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "vite-project",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Juliolimaal/Project_PW2.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Juliolimaal/Project_PW2/issues"
-  },
-  "homepage": "https://github.com/Juliolimaal/Project_PW2#readme",
   "devDependencies": {
     "vite": "^7.2.2"
   }

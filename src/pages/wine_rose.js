@@ -1,31 +1,8 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+export function WineRose(){
+    const element = document.createElement('div')
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wine Rosé</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="../js/cart.js" defer></script>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:wght@400;700&family=Lexend+Exa:wght@100..900&display=swap"
-    rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:wght@400;700&family=Lexend+Exa:wght@100..900&display=swap');
-
-    .font-lexend {
-      font-family: 'Lexend Exa', sans-serif;
-    }
-
-    .font-ibarra {
-      font-family: 'Ibarra Real Nova', serif;
-    }
-  </style>
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-</head>
-
-<body class="m-0 p-0 box-border overflow-x-hidden">
+  element.innerHTML = `
+<div class="m-0 p-0 box-border overflow-x-hidden">
 
   <nav class="flex justify-around items-center bg-white h-[15vh] font-lexend">
     <a href="#"
@@ -273,5 +250,6 @@
   </div>
 </div>
 
-</body>
-</html>
+</div>`
+return element
+}
