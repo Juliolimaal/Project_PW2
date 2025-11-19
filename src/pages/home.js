@@ -1,98 +1,22 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<<<<<<< HEAD
-    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
-    <title>WWW</title>
-    
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="/src/css/style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400;0,700;1,400;1,700&family=Lexend+Exa:wght@100;900&display=swap"
-      rel="stylesheet"
-    />
-   <script src="https://cdn.tailwindcss.com"></script>
+export function Home() {
 
-<script>
-    tailwind.config = {
-      content: [
-        "./index.html",
-        "./pages/**/*.html",
-        "./src/**/*.{html,js}",
-        "./public/**/*.{html,js}",
-        "/World-Wine/**/*.html",
-        "/World-Wine/src/**/*.{html,js}"
-      ],
-      theme: {
-        extend: {}
-      }
-    }
-</script>
-    
-    <style>
+  const element = document.createElement('div')
 
-      .nav-list li a::before {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 0;
-        height: 2px;
-        background: #fff;
-        transition: 0.3s;
-      }
-      .nav-list li a:hover::before {
-        width: 100%;
-      }
-     
-      .sophistication .text-sophistication ul li a::before,
-      .history .data ul li a::before {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 0;
-        height: 2px;
-        background: #310729;
-        transition: 0.3s;
-      }
-      .sophistication .text-sophistication ul li a:hover::before,
-      .history .data ul li a:hover::before {
-        width: 100%;
-      }
-
-      .font-lexend {
-        font-family: 'Lexend Exa', sans-serif;
-      }
-
-      .font-ibarra {
-        font-family: 'Ibarra Real Nova', serif;
-      }
-    </style>
-  </head>
-  <body class="m-0 p-0 box-border font-lexend">
-    <body class="bg-[#0f0510] text-white">
+  element.innerHTML = `
+  <div class="m-0 p-0 box-border font-lexend">
+    <div class="bg-[#0f0510] text-white">
 
       <!-- Navbar -->
-      <header class="bg-[#0f0510] h-20 flex items-center justify-between px-10">
+      <header class="bg-[#0f0510] h-20 flex items-center justify-between px-[100px]">
         <a href="/" class="text-2xl font-bold uppercase tracking-wider text-[#E9D0D3] font-ibarra">
           W<span class="text-[#56070C] text-3xl">W</span>W
         </a>
     
         <nav class="hidden md:flex space-x-10">
           <a href="#colecao" class="hover:text-[#56070C] transition text-[#E9D0D3]">Coleções</a>
-          <a href="https://beacons.ai/julio_cesar" class="hover:text-[#56070C] transition text-[#E9D0D3]">Contato</a>
+          <a href="#" class="hover:text-[#56070C] transition text-[#E9D0D3]">Contato</a>
           <a href="#saibamais" class="hover:text-[#56070C] transition text-[#E9D0D3]">Saiba Mais</a>
-          <a href="#" class="hover:text-[#56070C] transition text-[#E9D0D3]">Comprar</a>
+          <a href="#colecao" class="hover:text-[#56070C] transition text-[#E9D0D3]">Comprar</a>
         </nav>
     
         <div class="md:hidden">
@@ -103,13 +27,13 @@
       </header>
     
       
-      <section class="h-screen flex items-center justify-center bg-cover bg-center" 
-              style="background-image: url('/images/bg3.jpg'); background-size: cover; background-position: center; filter: brightness(0.9);">
+      <section class="h-[100vh] flex items-center justify-center bg-cover bg-center" 
+               style="background-image: url('images/bg3.jpg'); filter: brightness(90%);">
         <div class="text-center px-10 md:max-w-3xl lg:max-w-4xl xl:max-w-5xl">
           <h1 class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-[#E9D0D3] font-ibarra">
             Bem-Vindos a World <span class="text-[#56070C]">Wines</span> Web
           </h1>
-          <p class="mt-4 mb-5 text-base md:text-lg lg:text-xl xl:text-2xl text-center text-[#E9D0D3]">
+          <p class="mt-4 mb-[20px] text-base md:text-lg lg:text-xl xl:text-2xl text-center text-[#E9D0D3]">
             Encontre na nossa adega online vinhos que transformam qualquer instante em algo único.
             Cada garrafa é uma história esperando para ser compartilhada, entregue com todo o carinho até sua porta.
           </p>    
@@ -129,7 +53,7 @@
         });
       </script>
     
-    </body>
+    </div>
     
 
     <main class="mt-24">
@@ -157,45 +81,61 @@
             compõem essa seleção, trazendo o melhor de cada safra. Brindar com um bom vinho é
             transformar qualquer ocasião em algo memorável.
           </p>    
-          <a
-          class="font-lexend inline-block rounded-sm bg-[#56070C] px-8 py-3 text-sm font-medium text-white transition hover:scale-110 hover:shadow-xl focus:ring-3 focus:outline-hidden"
-          href="/pages/wine_white.html"
-          >
-          Ver Coleções
-          </a>
         </div>
       </section>
 
-      <section class="wines grid grid-cols-3 place-items-center mb-24">
-        <div class="wine-white text-center px-1">
-          <a href="/src/pages/wine_white.html">
-            <img
-              src="/images/wine-white-copy.png"
-              alt="White Wine"
-              class="h-[320px] sm:h-[360px] md:h-[400px] mx-auto transition duration-500 hover:opacity-50"
-            />
-          </a>
-          <p class="text-[40px] sm:text-[45px] md:text-[50px] font-ibarra text-[#A7AA37]">White</p>
-        </div>
-        <div class="wine-red text-center px-1">
-          <a href="/src/pages/wine_red.html">
-            <img
-              src="/images/wine-tinto-copy.png"
-              alt="Red Wine"
-              class="h-[320px] sm:h-[360px] md:h-[400px] mx-auto transition duration-500 hover:opacity-50"
-            />
-          </a>
-          <p class="text-[40px] sm:text-[45px] md:text-[50px] font-ibarra text-[#8C3A42]">Red</p>
-        </div>
-        <div class="wine-rose text-center px-1">
-          <a href="/src/pages/wine_rose.html">
-            <img
-              src="/images/wine-rose-copy.png"
-              alt="Rosé Wine"
-              class="h-[320px] sm:h-[360px] md:h-[400px] mx-auto transition duration-500 hover:opacity-50"
-            />
-          </a>
-          <p class="text-[40px] sm:text-[45px] md:text-[50px] font-ibarra text-[#DF587D]">Rosé</p>
+      <!-- CAROUSEL DE VINHOS COM SWIPER -->
+      <section class="wines mb-24 py-12">
+        <div class="w-full relative max-w-7xl mx-auto px-4">
+          <div class="swiper centered-slide-carousel swiper-container relative">
+            <div class="swiper-wrapper">
+              
+              <!-- Slide 1 - Vinho Branco -->
+              <div class="swiper-slide">
+                <div class="wine-white text-center px-4">
+                  <a href="portfolio/wine_white">
+                    <img
+                      src="images/wine-white-copy.png"
+                      alt="White Wine"
+                      class="h-[320px] sm:h-[360px] md:h-[400px] mx-auto transition duration-500 hover:opacity-50 object-contain"
+                    />
+                  </a>
+                  <p class="text-[40px] sm:text-[45px] md:text-[50px] font-ibarra text-[#A7AA37] mt-4">White</p>
+                </div>
+              </div>
+              
+              <!-- Slide 2 - Vinho Tinto -->
+              <div class="swiper-slide">
+                <div class="wine-red text-center px-4">
+                  <a href="portfolio/wine_red">
+                    <img
+                      src="images/wine-tinto-copy.png"
+                      alt="Red Wine"
+                      class="h-[320px] sm:h-[360px] md:h-[400px] mx-auto transition duration-500 hover:opacity-50 object-contain"
+                    />
+                  </a>
+                  <p class="text-[40px] sm:text-[45px] md:text-[50px] font-ibarra text-[#8C3A42] mt-4">Red</p>
+                </div>
+              </div>
+              
+              <!-- Slide 3 - Vinho Rosé -->
+              <div class="swiper-slide">
+                <div class="wine-rose text-center px-4">
+                  <a href="portfolio/wine_rose">
+                    <img
+                      src="images/wine-rose-copy.png"
+                      alt="Rosé Wine"
+                      class="h-[320px] sm:h-[360px] md:h-[400px] mx-auto transition duration-500 hover:opacity-50 object-contain"
+                    />
+                  </a>
+                  <p class="text-[40px] sm:text-[45px] md:text-[50px] font-ibarra text-[#DF587D] mt-4">Rosé</p>
+                </div>
+              </div>
+              
+            </div>
+            <!-- Paginação -->
+            <div class="swiper-pagination"></div>
+          </div>
         </div>
       </section>
       <div class="center-line flex items-center justify-center mb-24">
@@ -216,7 +156,7 @@
       >
         <div class="img-sophistication">
           <img
-            src="/images/sec02.jpg"
+            src="images/sec02.jpg"
             alt=""
             class="w-full max-w-[400px] h-auto transition duration-500"
           />
@@ -242,7 +182,7 @@
           <ul class="text-center md:text-left">
             <li>
               <a
-                href="/pages/wine_white.html"
+                href="#colecao"
                 class="relative mt-5 text-[#310729] transition duration-300 font-semibold"
                 style="font-size: clamp(14px, 2vw, 18px);"
               >
@@ -296,7 +236,7 @@
     <!-- Plantio -->
 
     <div class="w-[270px] h-[350px] bg-[#0f0510] rounded-xl text-white text-center p-8 shadow-lg transition-transform transform hover:translate-y-[-10px]">
-      <img src="/images/plantio.png" alt="" class="w-[80px] mx-auto mb-4">
+      <img src="images/plantio.png" alt="" class="w-[80px] mx-auto mb-4">
       <h3 class="text-xl mb-2">Plantio</h3>
       <p class="text-[#E1D9D9] mb-6">Plantio da uva exige solo, clima, cuidado, poda, irrigação e paciência.</p>
       <a
@@ -310,7 +250,7 @@
     <!-- Colheita -->
 
     <div class="w-[270px] h-[350px] bg-[#0f0510] rounded-xl text-white text-center p-8 shadow-lg transition-transform transform hover:translate-y-[-10px]">
-      <img src="/images/colheita.png" alt="" class="w-[80px] mx-auto mb-4">
+      <img src="images/colheita.png" alt="" class="w-[80px] mx-auto mb-4">
       <h3 class="text-xl mb-2">Colheita</h3>
       <p class="text-[#E1D9D9] mb-6">Cada uva colhida conta uma história de tradição, paixão e tempo.</p>
       <a
@@ -324,9 +264,9 @@
     <!-- Produção -->
 
     <div class="w-[270px] h-[350px] bg-[#0f0510] rounded-xl text-white text-center p-8 shadow-lg transition-transform transform hover:translate-y-[-10px]">
-      <img src="/images/esmagamento.png" alt="" class="w-[80px] mx-auto mb-4">
+      <img src="images/esmagamento.png" alt="" class="w-[80px] mx-auto mb-4">
       <h3 class="text-xl mb-2">Produção</h3>
-      <p class="text-[#E1D9D9] mb-6">Da uva ao vinho, arte e tradição moldam cada preciosa gota de vinho.</p>
+      <p class="text-[#E1D9D9] mb-6">Da uva ao vinho, arte e tradição moldam cada preciosa gota.</p>
       <a
       class="font-lexend inline-block rounded-sm bg-[#56070C] px-8 py-3 text-sm font-medium text-white transition hover:scale-110 hover:shadow-xl focus:ring-3 focus:outline-hidden"
       href="#"
@@ -338,7 +278,7 @@
     <!-- Venda -->
 
     <div class="w-[270px] h-[350px] bg-[#0f0510] rounded-xl text-white text-center p-8 shadow-lg transition-transform transform hover:translate-y-[-10px]">
-      <img src="/images/compras.png" alt="" class="w-[80px] mx-auto mb-4">
+      <img src="images/compras.png" alt="" class="w-[80px] mx-auto mb-4">
       <h3 class="text-xl mb-2">Venda</h3>
       <p class="text-[#E1D9D9] mb-6">Cada garrafa vendida leva consigo sabor, história e paixão pelo vinho.</p>
       <a
@@ -383,7 +323,7 @@
             </h2>
           </div>
           <div class="img-history flex justify-center">
-            <img src="/images/sec04.jpg" alt="" class="w-[min(40vw,340px)]" />
+            <img src="images/sec04.jpg" alt="" class="w-[min(40vw,340px)]" />
           </div>
         </div>
         <div
@@ -405,7 +345,7 @@
         </div>
         <div class="second grid grid-cols-1 lg:grid-cols-2 gap-5 justify-items-center mt-8">
           <div class="creator">
-            <img src="/images/cat.jpeg" alt="" class="w-[300px]" />
+            <img src="images/cat.jpeg" alt="" class="w-[300px]" />
           </div>
           <div
             class="text-history font-[Lexend_Exa] text-center text-[#310729] max-w-[95%]"
@@ -475,14 +415,15 @@
       </div>
     </footer>
     
+    <!-- Swiper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"></script>
 
-=======
-    <title>vite-project</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body>
-    <div id="app"></div>
->>>>>>> 8800a2d410678f7534a118ef4a5a1fe15c942736
+    <!-- Script de inicialização do Swiper -->
+    <script src="js/swiper-init.js"></script>
+
     <script type="module" src="/src/main.js"></script>
-  </body>
-</html>
+  </div>
+  `
+
+  return element
+}
