@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.nav-list li a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0; 
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: 0.3s;
+}
+.nav-list li a:hover::before {
+    width: 100%;
+}
+
+.sophistication .text-sophistication ul li a::before,
+.history .data ul li a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #310729;
+    transition: 0.3s;
+}
+.sophistication .text-sophistication ul li a:hover::before,
+.history .data ul li a:hover::before {
+    width: 100%;
+}
+
+.font-lexend {
+    font-family: 'Lexend Exa', sans-serif;
+}
+
+.font-ibarra {
+    font-family: 'Ibarra Real Nova', serif;
+}

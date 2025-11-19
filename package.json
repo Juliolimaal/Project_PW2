@@ -1,25 +1,27 @@
 {
-  "name": "project_pw2",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "proje_pw2",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "gh-pages -d dist -r https://github.com/Juliolimaal/Project_PW2.git",
+    "tailwind:init": "tailwindcss init -p"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Juliolimaal/Project_PW2.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Juliolimaal/Project_PW2/issues"
-  },
-  "homepage": "https://github.com/Juliolimaal/Project_PW2#readme",
   "devDependencies": {
-    "vite": "^7.2.2"
+    "@tailwindcss/postcss": "^4.1.17",
+    "autoprefixer": "^10.4.22",
+    "tailwindcss": "^4.1.17",
+    "vite": "^7.1.7"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.17",
+    "i": "^0.3.7",
+    "swiper": "^11.1.0"
   }
 }
