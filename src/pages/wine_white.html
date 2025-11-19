@@ -1,8 +1,30 @@
-export function WineWhite() {
-    const element = document.createElement('div')
+<!DOCTYPE html>
+<html lang="pt-br">
 
-  element.innerHTML = `
-<div class="m-0 p-0 box-border overflow-x-hidden">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wine White</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="/js/cart.js" defer></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:wght@400;700&family=Lexend+Exa:wght@100..900&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <style>
+
+    .font-lexend {
+      font-family: 'Lexend Exa', sans-serif;
+    }
+
+    .font-ibarra {
+      font-family: 'Ibarra Real Nova', serif;
+    }
+  </style>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body class="m-0 p-0 box-border overflow-x-hidden">
 
   <nav class="flex justify-around items-center bg-white h-[15vh] font-lexend">
     <a href="#"
@@ -11,33 +33,33 @@ export function WineWhite() {
     </a>
     <ul class="hidden md:flex list-none" data-aos="fade-up" data-aos-duration="1500" data-aos-easing="linear" data-aos-delay="500">
       <li
-        class="relative tracking-[3px] ml-12 after:content-[''] after:absolute after:top-full after:left-0 after:w-0 after:h-[2px] after:bg-[#A7AA37] after:transition-all after:duration-300 hover:after:w-full">
-        <a href="../index.html" class="text-[#A7AA37]">home</a>
+        class="relative tracking-[3px] ml-12 after:content-[''] after:absolute after:top-full after:left-0 after:w-0 after:h-0.5fter:bg-[#A7AA37] after:transition-all after:duration-300 hover:after:w-full">
+        <a href="/index.html" class="text-[#A7AA37]">home</a>
       </li>
       <li
-        class="relative tracking-[3px] ml-12 after:content-[''] after:absolute after:top-full after:left-0 after:w-0 after:h-[2px] after:bg-[#A7AA37] after:transition-all after:duration-300 hover:after:w-full">
+        class="relative tracking-[3px] ml-12 after:content-[''] after:absolute after:top-full after:left-0 after:w-0 after:h-0.5 after:bg-[#A7AA37] after:transition-all after:duration-300 hover:after:w-full">
         <a href="#" class="text-[#A7AA37]">contato</a>
       </li>
       <li
-        class="relative tracking-[3px] ml-12 after:content-[''] after:absolute after:top-full after:left-0 after:w-0 after:h-[2px] after:bg-[#A7AA37] after:transition-all after:duration-300 hover:after:w-full">
-        <a href="../#saibamais" class="text-[#A7AA37]">saiba mais</a>
+        class="relative tracking-[3px] ml-12 after:content-[''] after:absolute after:top-full after:left-0 after:w-0 after:h-0.5fter:bg-[#A7AA37] after:transition-all after:duration-300 hover:after:w-full">
+        <a href="#" class="text-[#A7AA37]">saiba mais</a>
       </li>
       <li
-        class="relative tracking-[3px] ml-12 after:content-[''] after:absolute after:top-full after:left-0 after:w-0 after:h-[2px] after:bg-[#A7AA37] after:transition-all after:duration-300 hover:after:w-full">
-        <a href="../#colecao" class="text-[#A7AA37]">comprar</a>
+        class="relative tracking-[3px] ml-12 after:content-[''] after:absolute after:top-full after:left-0 after:w-0 after:h-0.5 after:bg-[#A7AA37] after:transition-all after:duration-300 hover:after:w-full">
+        <a href="#" class="text-[#A7AA37]">comprar</a>
       </li>
     </ul>
 
     <div class="md:hidden cursor-pointer" id="mobile-menu" data-aos="fade-up" data-aos-duration="1500" data-aos-easing="linear" data-aos-delay="500">
-      <div class="w-8 h-[2px] bg-[#A7AA37] mb-2 transition-all"></div>
-      <div class="w-8 h-[2px] bg-[#A7AA37] mb-2 transition-all"></div>
-      <div class="w-8 h-[2px] bg-[#A7AA37] transition-all"></div>
+      <div class="w-8 h-0.5 bg-[#A7AA37] mb-2 transition-all"></div>
+      <div class="w-8 h-0.5g-[#A7AA37] mb-2 transition-all"></div>
+      <div class="w-8 h-0.5 bg-[#A7AA37] transition-all"></div>
     </div>
 
     <div class="relative cursor-pointer" id="cart-icon" title="Ver carrinho">
   <span class="material-symbols-outlined text-[#A7AA37] text-3xl">shopping_cart</span>
   <span id="cart-count"
-        class="absolute -top-2 -right-2 bg-[#A7AA37] text-white text-xs rounded-full px-2 py-[1px]">
+        class="absolute -top-2 -right-2 bg-[#A7AA37] text-white text-xs rounded-full px-2 py-px">
     0
   </span>
     </div>
@@ -52,9 +74,9 @@ export function WineWhite() {
 
   <header class="flex flex-col items-center h-[700px]">
     <div class="flex items-center justify-center" data-aos="fade-up" data-aos-duration="1500" data-aos-easing="linear">
-      <div class="h-[100px] w-[1px] bg-gradient-to-t from-[#A7AA37] to-white"></div>
+      <div class="h-[100px] w-px bg-linear-to-t from-[#A7AA37] to-white"></div>
     </div>
-    <h1 class="font-ibarra font-semibold font-semibold text-9xl text-center text-[#A7AA37] mt-[20px] mb-[10px] animate-aparecer 2xl:text-[200px] 2xl: mb-[50px]" data-aos="fade-up" data-aos-duration="1500" data-aos-easing="linear">White
+    <h1 class="font-ibarra font-semibold text-9xl text-center text-[#A7AA37] mt-5 mb-2.5 animate-aparecer 2xl:w-pxtext-[200px] 2xl:" data-aos="fade-up" data-aos-duration="150w px-aos-easing="linear">White
     </h1>
     <p class="font-lexend text-base w-[500px] font-normal text-center text-[#A7AA37] mb-5 animate-aparecer" data-aos="fade-up" data-aos-duration="1500" data-aos-easing="linear">Envelhece em cubas e barricas de carvalho.</p>
     <p class="font-lexend text-base w-[450px] font-normal text-center text-[#A7AA37] mb-5 animate-aparecer" data-aos="fade-up" data-aos-duration="1500" data-aos-easing="linear">Preserva frescor e vivacidade, seja em perfil seco ou adocicado, sempre em equilíbrio com o teor alcoólico resultante da fortificação.</p>
@@ -103,7 +125,7 @@ export function WineWhite() {
           </div>
         </div>
         <div class="img-brisa order-1 lg:order-2" data-aos="fade-down" data-aos-duration="1500" data-aos-easing="linear" data-aos-delay="300">
-          <img src="../images/img_page_white2-removebg-preview.png" alt="">
+          <img src="/images/img_page_white2-removebg-preview.png" alt="">
         </div>
       </div>
     </section>
@@ -112,26 +134,26 @@ export function WineWhite() {
       <!-- Icons section -->
       <div class="flex flex-col justify-center items-center mt-[60px]" data-aos="fade-up" data-aos-duration="1500" data-aos-easing="linear">
         <h2 class="w-[450px] font-['Ibarra_Real_Nova'] text-[40px] text-center text-[#A7AA37] md:w-[700px] md:text-[50px]">A maioria dos nossos vinhos possuem selo DOCG</h2>
-        <div class="mt-[30px] flex justify-center items-center w-[200px] h-[200px] border-[3px] border-[#A7AA37] rounded-full transition duration-500 hover:translate-y-[-10px]">
+        <div class="mt-[30px] flex justify-center items-center w-[200px] h-[200px] border-[3px] border-[#A7AA37] rounded-full transition duration-500 hover:-translate-y-2.5">
           <p class="font-['Lexend_Exa'] text-[#A7AA37] text-[30px]">D.O.C.G</p>
         </div>
       </div>
       
       <!-- Alvorecer Dourado section -->
-      <div class="flex flex-col items-center gap-[20px] mx-[30px] mt-[30px] mb-[60px] md:flex-col md:items-center md:gap-[20px] md:mx-[30px] md:my-[30px] md:mb-[60px] lg:flex-row lg:justify-start lg:items-center lg:gap-[60px] lg:mx-[50px] lg:mt-[30px] lg:mb-[100px] 2xl:mx-[200px]">
+      <div class="flex flex-col items-center gap-5 mx-[30px] mt-[30px] mb-[60px] md:flex-col md:items-center md:gap-5 md:mx-[30px] md:my-[30px] md:mb-[60px] lg:flex-row lg:justify-start lg:items-center lg:gap-[60px] lg:mx-[50px] lg:mt-[30px] lg:mb-[100px] 2xl:mx-[200px]">
         <div class="img-alvorecer" data-aos="fade-down" data-aos-duration="1500" data-aos-easing="linear" data-aos-delay="300">
-          <img src="../images/img_page_white-removebg-preview.png" alt="">
+          <img src="/images/img_page_white-removebg-preview.png" alt="">
         </div>
         <div class="flex flex-col items-center w-[450px] font-['Lexend_Exa'] md:items-center md:w-[502px] lg:items-start lg:w-[502px]" data-aos="fade-left" data-aos-duration="1500" data-aos-easing="linear" data-aos-delay="300">
           <h2 class="font-['Ibarra_Real_Nova'] text-[50px] font-extrabold md:text-[60px] lg:text-[60px]">Alvorecer Dourado</h2>
-          <h3 class="text-[#A7AA37] text-[20px] font-normal m-[10px]">O brilho da manhã em cada taça</h3>
-          <p class="text-[14px] font-light mb-[20px] text-justify md:text-base lg:text-base">
+          <h3 class="text-[#A7AA37] text-[20px] font-normal m-2.5">O brilho da manhã em cada taça</h3>
+          <p class="text-[14px] font-light mb-5 text-justify md:text-base lg:text-base">
             De tonalidade dourada e reflexos luminosos, Alvorecer Dourado traz uma combinação envolvente de notas
             florais e frutas cítricas, criando um aroma delicado e sofisticado. Leve e elegante, seu frescor harmoniza
             perfeitamente com sua acidez equilibrada, proporcionando um final suave e marcante. Ideal para momentos de
             celebração.
           </p>
-          <div class="flex gap-[20px] md:gap-[40px] lg:gap-[40px]">
+          <div class="flex gap-5ap-[40px] lg:gap-10">
             <div 
             class="flex gap-2.5 bg-[#A7AA37] text-white px-8 py-2.5 transition duration-500 hover:bg-white hover:text-[#A7AA37] hover:border hover:border-[#A7AA37] ... add-to-cart-btn cursor-pointer"
               data-name="Alvorecer Dourado" 
@@ -139,7 +161,7 @@ export function WineWhite() {
               <span class="material-symbols-outlined">shopping_bag</span>
               <a>comprar</a>
             </div>
-            <div class="flex gap-[10px] text-[#A7AA37] px-[30px] py-[10px] transition duration-500 hover:tracking-[3px]">
+            <div class="flex gap-2.5 text-[#A7AA37] px-[30px] py-2.5 transition duration-500 hover:tracking-[3px]">
               <span class="material-symbols-outlined">reviews</span>
               <a class="transition-all duration-500 group-hover:tracking-[3px]">avaliações</a>
             </div>
@@ -149,20 +171,20 @@ export function WineWhite() {
     </section>
 
     <section class="third">
-      <div class="flex flex-col justify-center items-center gap-[20px] mx-[30px] mb-[100px] mt-0 lg:flex-row lg:justify-end lg:items-center lg:gap-[60px] lg:mx-[50px] lg:my-[60px] lg:mb-[100px] 2xl:mx-[200px]">
-        <div class="img-regia order-1 lg:order-none" data-aos="fade-down" data-aos-duration="1500" data-aos-easing="linear" data-aos-delay="300">
-          <img src="../images/img_page_white3-removebg-preview.png" alt="">
+      <div class="flex flex-col justify-center items-center gap-5 mx-[30px] mb-[100px] mt-0 lg:flex-row lg:justify-end lg:items-center lg:gap-[60px] lg:mx-[50px] lg:my-[60px] lg:mb-[100px] 2xl:mx-[200px]">
+        <div class="img-regia order-1 lg:order-0" data-aos="fade-down" data-aos-duration="1500" data-aos-easing="linear" data-aos-delay="300">
+          <img src="/images/img_page_white3-removebg-preview.png" alt="">
         </div>
         <div class="flex flex-col items-center w-[455px] font-['Lexend_Exa'] order-2 lg:items-start lg:w-[500px]" data-aos="fade-left" data-aos-duration="1500" data-aos-easing="linear" data-aos-delay="300">
           <h2 class="font-['Ibarra_Real_Nova'] text-[60px] font-extrabold">Vera Régia</h2>
-          <h3 class="text-[#A7AA37] text-[20px] font-normal m-[10px]">O sabor nobre de uma experiência inesquecível</h3>
-          <p class="font-light mb-[20px] text-justify text-[14px] lg:text-base">
+          <h3 class="text-[#A7AA37] text-[20px] font-normal m-2.5">O sabor nobre de uma experiência inesquecível</h3>
+          <p class="font-light mb-5 text-justify text-[14px] lg:text-base">
             Elegante e envolvente, Vera Régia revela notas sutis de frutas secas, especiarias e um toque de mel. Com
             textura aveludada e equilíbrio perfeito, transforma cada taça em um momento de
             sofisticação. Ideal para
             celebrar com requinte.
           </p>
-          <div class="flex gap-[20px] lg:gap-[40px]">
+          <div class="flex gap-5 lg:gap-10">
             <div 
             class="flex gap-2.5 bg-[#A7AA37] text-white px-8 py-2.5 transition duration-500 hover:bg-white hover:text-[#A7AA37] hover:border hover:border-[#A7AA37] ... add-to-cart-btn cursor-pointer"
               data-name="Vera Régia" 
@@ -170,7 +192,7 @@ export function WineWhite() {
               <span class="material-symbols-outlined">shopping_bag</span>
               <a>comprar</a>
             </div>
-            <div class="flex gap-[10px] text-[#A7AA37] px-[30px] py-[10px] transition duration-500 hover:tracking-[3px]">
+            <div class="flex gap-2.5 text-[#A7AA37] px-[30px] py-2.5 transition duration-500 hover:tracking-[3px]">
               <span class="material-symbols-outlined">reviews</span>
               <a class="transition-all duration-500 group-hover:tracking-[3px]">avaliações</a>
             </div>
@@ -247,16 +269,16 @@ export function WineWhite() {
     </div>
   </main>
   <footer class="h-[650px] bg-[#0f0510] text-white flex flex-col items-center pt-24 pb-5 relative z-10">
-    <div class="font-['Lexend_Exa'] mb-[-40px]">Próxima Família</div>
-    <a href="./wine_red.html" class="group relative flex items-center justify-between text-white no-underline px-10 py-5 uppercase tracking-wider text-sm font-['Lexend_Exa'] absolute bottom-[-390px] z-20 overflow-hidden">
+    <div class="font-['Lexend_Exa'] -mb-10">Próxima Família</div>
+    <a href="/pages/wine_red.html" class="group relative flex items-center justify-between text-white no-underline px-10 py-5 uppercase tracking-wider text-sm font-['Lexend_Exa'] bottom-[-390px] z-20 overflow-hidden">
       <span class="relative z-10">Saiba Mais</span>
       <span class="absolute inset-0 bg-[#6d282f] transition-all duration-300 ease-in-out"></span>
       <span class="absolute inset-0 bg-[#9e5159] transform translate-x-full transition-all duration-300 ease-in-out group-hover:translate-x-0"></span>
     </a>
     <div class="wine-image relative z-10">
-      <img width="125px" src="../images/wine-tinto-copy.png" alt="Calem Porto Rosé Wine" class="opacity-80">
+      <img width="125px" src="/images/wine-tinto-copy.png" alt="Calem Porto Rosé Wine" class="opacity-80">
     </div>
-    <div class="text-[200px] font-['Ibarra_Real_Nova'] font-extrabold text-[#6d282f] absolute top-[80px] z-0">Red</div>
+    <div class="text-[200px] font-['Ibarra_Real_Nova'] font-extrabold text-[#6d282f] absolute top-20 z-0">Red</div>
   </footer>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
@@ -283,7 +305,6 @@ export function WineWhite() {
     </button>
   </div>
 </div>
-
-</div>`
-return element
-}
+    <script type="module" src="/src/main.js"></script>
+</body>
+</html>
