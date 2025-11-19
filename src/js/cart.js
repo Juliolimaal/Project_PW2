@@ -1,3 +1,4 @@
+import { recordSale, getMostPurchased } from "./statistics.js";
 const cartIcon = document.getElementById('cart-icon');
 const cartPanel = document.getElementById('cart-panel');
 const cartItemsEl = document.getElementById('cart-items');
@@ -61,6 +62,19 @@ function renderCart() {
   const total = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
   cartTotalEl.textContent = `Total: R$ ${total.toFixed(2)}`;
   updateCartCount();
+  // Mostrar vinho mais vendido
+const topWineMsgEl = document.getElementById("top-wine-msg");
+if (cart.length > 0) {
+  const topWine = cart.reduce((max, item) => 
+    item.qty > max.qty ? item : max
+  );
+
+  topWineMsgEl.textContent = `🍷 Vinho mais comprado: ${topWine.name} (${topWine.qty} vendas)`;
+  topWineMsgEl.classList.remove("hidden");
+} else {
+  topWineMsgEl.classList.add("hidden");
+}
+
   localStorage.setItem('cart', JSON.stringify(cart));
 }
 // --------------------------------------------------------
@@ -73,6 +87,8 @@ function addToCart(name, price) {
     cart.push({ name, price, qty: 1 });
   }
   renderCart();
+  recordSale(name);
+
 }
 
 function removeItem(name) {
@@ -88,6 +104,21 @@ clearCartBtn.addEventListener('click', () => {
 cartIcon.addEventListener('click', () => {
   cartPanel.classList.toggle('translate-x-[calc(100%+2rem)]');
 });
+
+// Mostrar estatística quando o carrinho abrir
+cartIcon.addEventListener("click", () => {
+  const stat = getMostPurchased();
+
+  if (!stat) return;
+
+  alert(
+    `🍷 Vinho mais comprado até agora:\n\n` +
+    `⭐ ${stat.name}\n` +
+    `🛒 ${stat.count} vendas\n` +
+    `📊 ${stat.percent}% de todas as compras`
+  );
+});
+
 
 renderCart();
 
