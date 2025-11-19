@@ -24,18 +24,16 @@ jobs:
 
       - name: Install dependencies
         run: |
-          cd World-Wine
           npm ci
 
       - name: Build site
         run: |
-          cd World-Wine
           npm run build
 
       - name: Upload build artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./World-Wine/dist
+          path: ./dist
 
   deploy:
     runs-on: ubuntu-latest
