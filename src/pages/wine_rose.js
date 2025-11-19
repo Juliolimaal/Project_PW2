@@ -1,32 +1,6 @@
 export function WineRose(){
     const element = document.createElement('div')
 
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wine Rosé</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="/js/cart.js" defer></script>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:wght@400;700&family=Lexend+Exa:wght@100..900&display=swap"
-    rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-  <style>
-
-    .font-lexend {
-      font-family: 'Lexend Exa', sans-serif;
-    }
-
-    .font-ibarra {
-      font-family: 'Ibarra Real Nova', serif;
-    }
-  </style>
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-</head>
-
-<body class="m-0 p-0 box-border overflow-x-hidden">
-
   element.innerHTML = `
 <div class="m-0 p-0 box-border overflow-x-hidden">
 
@@ -37,21 +11,14 @@ export function WineRose(){
     </a>
     <ul class="hidden md:flex list-none" data-aos="fade-up" data-aos-duration="1500" data-aos-easing="linear" data-aos-delay="500">
       <li
-        class="relative tracking-[3px] ml-12 after:content-[''] after:absolute after:top-full after:left-0 after:w-0 after:h-0.5fter:bg-[#DF587D] after:transition-all after:duration-300 hover:after:w-full">
-        <a href="/index.html" class="text-[#DF587D]">home</a>
-      </li>
-      <li
-        class="relative tracking-[3px] ml-12 after:content-[''] after:absolute after:top-full after:left-0 after:w-0 after:h-0.5 after:bg-[#DF587D] after:transition-all after:duration-300 hover:after:w-full">
-        <a href="#" class="text-[#DF587D]">contato</a>
+        class="relative tracking-[3px] ml-12 after:content-[''] after:absolute after:top-full after:left-0 after:w-0 after:h-[2px] after:bg-[#DF587D] after:transition-all after:duration-300 hover:after:w-full">
+        <a href="../index.html" class="text-[#DF587D]">home</a>
       </li>
       <li
         class="relative tracking-[3px] ml-12 after:content-[''] after:absolute after:top-full after:left-0 after:w-0 after:h-[2px] after:bg-[#DF587D] after:transition-all after:duration-300 hover:after:w-full">
-        <a href="../#saibamais" class="text-[#DF587D]">saiba mais</a>
+        <a href="#" class="text-[#DF587D]">contato</a>
       </li>
       <li
-        class="relative tracking-[3px] ml-12 after:content-[''] after:absolute after:top-full after:left-0 after:w-0 after:h-0.5 after:bg-[#DF587D] after:transition-all after:duration-300 hover:after:w-full">
-        <a href="#" class="text-[#DF587D]">comprar</a>
-
         class="relative tracking-[3px] ml-12 after:content-[''] after:absolute after:top-full after:left-0 after:w-0 after:h-[2px] after:bg-[#DF587D] after:transition-all after:duration-300 hover:after:w-full">
         <a href="../#saibamais" class="text-[#DF587D]">saiba mais</a>
       </li>
@@ -62,15 +29,15 @@ export function WineRose(){
     </ul>
 
     <div class="md:hidden cursor-pointer" id="mobile-menu" data-aos="fade-up" data-aos-duration="1500" data-aos-easing="linear" data-aos-delay="500">
-      <div class="w-8 h-0.5 bg-[#DF587D] mb-2 transition-all"></div>
-      <div class="w-8 h-0.5 bg-[#DF587D] mb-2 transition-all"></div>
-      <div class="w-8 h-0.5 bg-[#DF587D] transition-all"></div>
+      <div class="w-8 h-[2px] bg-[#DF587D] mb-2 transition-all"></div>
+      <div class="w-8 h-[2px] bg-[#DF587D] mb-2 transition-all"></div>
+      <div class="w-8 h-[2px] bg-[#DF587D] transition-all"></div>
     </div>
 
     <div class="relative cursor-pointer" id="cart-icon" title="Ver carrinho">
   <span class="material-symbols-outlined text-[#DF587D] text-3xl">shopping_cart</span>
   <span id="cart-count"
-        class="absolute -top-2 -right-2 bg-[#DF587D] text-white text-xs rounded-full px-2 py-px">
+        class="absolute -top-2 -right-2 bg-[#DF587D] text-white text-xs rounded-full px-2 py-[1px]">
     0
   </span>
     </div>
@@ -85,9 +52,9 @@ export function WineRose(){
 
   <header class="flex flex-col items-center h-[700px]">
     <div class="flex items-center justify-center" data-aos="fade-up" data-aos-duration="1500" data-aos-easing="linear">
-      <div class="h-[100px] w-px bg-linear-to-t from-[#DF587D] to-white"></div>
+      <div class="h-[100px] w-[1px] bg-gradient-to-t from-[#DF587D] to-white"></div>
     </div>
-    <h1 class="font-ibarra font-semibold text-9xl text-center text-[#DF587D] mt-5 mb-2.5imate-aparecer 2xl:text-[200px] 2xl:" data-aos="fade-up" data-aos-duration="1500" data-aos-easing="linear">Rosé
+    <h1 class="font-ibarra font-semibold font-semibold text-9xl text-center text-[#DF587D] mt-[20px] mb-[10px] animate-aparecer 2xl:text-[200px] 2xl: mb-[50px]" data-aos="fade-up" data-aos-duration="1500" data-aos-easing="linear">Rosé
     </h1>
     <p class="font-lexend text-base w-[500px] font-normal text-center text-[#DF587D] mb-5 animate-aparecer" data-aos="fade-up" data-aos-duration="1500" data-aos-easing="linear">Esse delicioso vinho envelhece em cubas de inox.</p>
     <p class="font-lexend text-base w-[450px] font-normal text-center text-[#DF587D] mb-5 animate-aparecer" data-aos="fade-up" data-aos-duration="1500" data-aos-easing="linear">Com tonalidade rosa viva e delicadamente brilhante, revela um elegante sabor com notas frescas de morango, cereja e framboesa. Um vinho rosé envolvente, equilibrado e cheio de frescor, perfeito para momentos leves e descontraídos.</p>
@@ -114,7 +81,7 @@ export function WineRose(){
       <div class="mx-8 flex flex-col lg:flex-row justify-center items-center gap-16">
         <div
           class="flex flex-col items-center lg:items-start font-['Lexend_Exa'] w-[455px] md:w-[500px] order-2 lg:order-1" data-aos="fade-right" data-aos-duration="1500" data-aos-easing="linear" data-aos-delay="300">
-          <h2 class="font-['Ibarra_Real_Nova'] text-6xl font-extrabold">Porto Da Luz Rosé</h2>
+          <h2 class="font-['Ibarra_Real_Nova'] text-6xl font-extrabold">Port Da Luz Rosé</h2>
           <h3 class="text-[#DF587D] text-xl font-normal m-2.5">Delicadeza e frescor em perfeita sintonia</h3>
           <p class="font-light mb-5 text-justify text-sm md:text-base">
             De cor rosada brilhante com reflexos sutis, Da Luz Porto Rosé revela aromas envolventes de morango, framboesa e cereja, com um toque floral delicado. 
@@ -135,7 +102,7 @@ export function WineRose(){
           </div>
         </div>
         <div class="img-brisa order-1 lg:order-2" data-aos="fade-down" data-aos-duration="1500" data-aos-easing="linear" data-aos-delay="300">
-          <img src="/images/image-wine-da-luz.png" alt="">
+          <img src="../images/image-wine-da-luz.png" alt="">
         </div>
       </div>
     </section>
@@ -144,23 +111,23 @@ export function WineRose(){
       <!-- Icons section -->
       <div class="flex flex-col justify-center items-center mt-[60px]" data-aos="fade-up" data-aos-duration="1500" data-aos-easing="linear">
         <h2 class="w-[450px] font-['Ibarra_Real_Nova'] text-[40px] text-center text-[#DF587D] md:w-[700px] md:text-[50px]">A maioria dos nossos vinhos possuem selo DOCG</h2>
-        <div class="mt-[30px] flex justify-center items-center w-[200px] h-[200px] border-[3px] border-[#DF587D] rounded-full transition duration-500 hover:-translate-y-2.5">
+        <div class="mt-[30px] flex justify-center items-center w-[200px] h-[200px] border-[3px] border-[#DF587D] rounded-full transition duration-500 hover:translate-y-[-10px]">
           <p class="font-['Lexend_Exa'] text-[#DF587D] text-[30px]">D.O.C.G</p>
         </div>
       </div>
       
       <!-- Fresh Rosé section -->
-      <div class="flex flex-col items-center gap-5 mx-[30px] mt-[30px] mb-[60px] md:flex-col md:items-center md:gamd:gap-5x-[30px] md:my-[30px] md:mb-[60px] lg:flex-row lg:justify-start lg:items-center lg:gap-[60px] lg:mx-[50px] lg:mt-[30px] lg:mb-[100px] 2xl:mx-[200px]">
+      <div class="flex flex-col items-center gap-[20px] mx-[30px] mt-[30px] mb-[60px] md:flex-col md:items-center md:gap-[20px] md:mx-[30px] md:my-[30px] md:mb-[60px] lg:flex-row lg:justify-start lg:items-center lg:gap-[60px] lg:mx-[50px] lg:mt-[30px] lg:mb-[100px] 2xl:mx-[200px]">
         <div class="img-alvorecer" data-aos="fade-down" data-aos-duration="1500" data-aos-easing="linear" data-aos-delay="300">
-          <img src="/images/image-wine-fresh-rose.png" alt="">
+          <img src="../images/image-wine-fresh-rose.png" alt="">
         </div>
         <div class="flex flex-col items-center w-[450px] font-['Lexend_Exa'] md:items-center md:w-[502px] lg:items-start lg:w-[502px]" data-aos="fade-left" data-aos-duration="1500" data-aos-easing="linear" data-aos-delay="300">
           <h2 class="font-['Ibarra_Real_Nova'] text-[50px] font-extrabold md:text-[60px] lg:text-[60px]">Fresh Rosé</h2>
-          <h3 class="text-[#DF587D] text-[20px] font-normal m-2.5">Elaborado para capturar a essência do verão em cada taça.</h3>
-          <p class="text-[14px] font-light mb-5 text-justify md:text-base lg:text-base">
+          <h3 class="text-[#DF587D] text-[20px] font-normal m-[10px]">Elaborado para capturar a essência do verão em cada taça.</h3>
+          <p class="text-[14px] font-light mb-[20px] text-justify md:text-base lg:text-base">
            Elegante, fresco e delicadamente frutado, com notas de morango, framboesa e cereja.
           </p>
-          <div class="flex gap-5 md:gamd:gap-10ap-[40px]">
+          <div class="flex gap-[20px] md:gap-[40px] lg:gap-[40px]">
             <div 
             class="flex gap-2.5 bg-[#DF587D] text-white px-8 py-2.5 transition duration-500 hover:bg-white hover:text-[#DF587D] hover:border hover:border-[#DF587D] ... add-to-cart-btn cursor-pointer"
               data-name="Fresh Rosé" 
@@ -168,7 +135,7 @@ export function WineRose(){
               <span class="material-symbols-outlined">shopping_bag</span>
               <a>comprar</a>
             </div>
-            <div class="flex gap-2.5 text-[#DF587D] px-[30px] py-2.5 transition duration-500 hover:tracking-[3px]">
+            <div class="flex gap-[10px] text-[#DF587D] px-[30px] py-[10px] transition duration-500 hover:tracking-[3px]">
               <span class="material-symbols-outlined">reviews</span>
               <a class="transition-all duration-500 group-hover:tracking-[3px]">avaliações</a>
             </div>
@@ -246,16 +213,16 @@ export function WineRose(){
     </div>
   </main>
   <footer class="h-[650px] bg-[#0f0510] text-white flex flex-col items-center pt-24 pb-5 relative z-10">
-    <div class="font-['Lexend_Exa'] -mb-10">Próxima Família</div>
-    <a href="/pages/wine_white.html" class="group relative flex items-center justify-between text-white no-underline px-10 py-5 uppercase tracking-wider text-sm font-['Lexend_Exa'] bottom-[-390px] z-20 overflow-hidden">
+    <div class="font-['Lexend_Exa'] mb-[-40px]">Próxima Família</div>
+    <a href="./wine_white.html" class="group relative flex items-center justify-between text-white no-underline px-10 py-5 uppercase tracking-wider text-sm font-['Lexend_Exa'] absolute bottom-[-390px] z-20 overflow-hidden">
       <span class="relative z-10">Saiba Mais</span>
       <span class="absolute inset-0 bg-[#A7AA37] transition-all duration-300 ease-in-out"></span>
       <span class="absolute inset-0 bg-[#888b2c] transform translate-x-full transition-all duration-300 ease-in-out group-hover:translate-x-0"></span>
     </a>
     <div class="wine-image relative z-10">
-      <img width="125px" src="/images/wine-white-copy.png" alt="Calem Porto Rosé Wine" class="opacity-80">
+      <img width="125px" src="../images/wine-white-copy.png" alt="Calem Porto Rosé Wine" class="opacity-80">
     </div>
-    <div class="text-[200px] font-['Ibarra_Real_Nova'] font-extrabold text-[#A7AA37] absolute top-20 z-0">White</div>
+    <div class="text-[200px] font-['Ibarra_Real_Nova'] font-extrabold text-[#A7AA37] absolute top-[80px] z-0">White</div>
   </footer>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
