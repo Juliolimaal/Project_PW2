@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Wine Red</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="/Project_PW2/src/js/cart.js" defer></script>
   <link
     href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:wght@400;700&family=Lexend+Exa:wght@100..900&display=swap"
     rel="stylesheet">
@@ -124,7 +123,7 @@
           </div>
         </div>
         <div class="img-brisa order-1 lg:order-2" data-aos="fade-down" data-aos-duration="1500" data-aos-easing="linear" data-aos-delay="300">
-          <img src="/Project_PW2/public/images/image-wine-red-alesia.png" alt="Red Wine Alesia" loading="lazy" class="max-w-full h-auto">
+          <img src="../../public/images/image-wine-red-alesia.png" alt="Red Wine Alesia" loading="lazy" class="max-w-full h-auto">
         </div>
       </div>
     </section>
@@ -141,7 +140,7 @@
       <!-- Larnache section -->
       <div class="flex flex-col items-center gap-5 mx-[30px] mt-[30px] mb-[60px] md:flex-col md:items-center md:gap-5x-[30px] md:my-[30px] md:mb-[60px] lg:flex-row lg:justify-start lg:items-center lg:gap-[60px] lg:mx-[50px] lg:mt-[30px] lg:mb-[100px] 2xl:mx-[200px]">
         <div class="img-alvorecer" data-aos="fade-down" data-aos-duration="1500" data-aos-easing="linear" data-aos-delay="300">
-          <img src="/Project_PW2/public/images/image-wine-red-larnache.png" alt="Larnache">
+          <img src="../../public/images/image-wine-red-larnache.png" alt="Larnache">
         </div>
         <div class="flex flex-col items-center w-[450px] font-['Lexend_Exa'] md:items-center md:w-[502px] lg:items-start lg:w-[502px]" data-aos="fade-left" data-aos-duration="1500" data-aos-easing="linear" data-aos-delay="300">
           <h2 class="font-['Ibarra_Real_Nova'] text-[50px] font-extrabold md:text-[60px] lg:text-[60px]">Larnache</h2>
@@ -170,7 +169,7 @@
     <section class="third">
       <div class="flex flex-col justify-center items-center gap-5 mx-[30px] mb-[100px] mt-0 lg:flex-row lg:justify-end lg:items-center lg:gap-[60px] lg:mx-[50px] lg:my-[60px] lg:mb-[100px] 2xl:mx-[200px]">
         <div class="img-regia order-1" lg:order-0ata-aos="fade-down" data-aos-duration="1500" data-aos-easing="linear" data-aos-delay="300">
-          <img src="/Project_PW2/public/images/image-wine-red-vitalo.png" alt="Vitalo">
+          <img src="../../public/images/image-wine-red-vitalo.png" alt="Vitalo">
         </div>
         <div class="flex flex-col items-center w-[455px] font-['Lexend_Exa'] order-2 lg:items-start lg:w-[500px]" data-aos="fade-left" data-aos-duration="1500" data-aos-easing="linear" data-aos-delay="300">
           <h2 class="font-['Ibarra_Real_Nova'] text-[60px] font-extrabold">Vitalo Vermelho</h2>
@@ -266,13 +265,13 @@
   </main>
   <footer class="h-[650px] bg-[#0f0510] text-white flex flex-col items-center pt-24 pb-5 relative z-10">
     <div class="font-['Lexend_Exa'] -mb-10">Próxima Família</div>
-    <a href="/Project_PW2/src/pages/wine_rose.html" class="group relative flex items-center justify-between text-white no-underline px-10 py-5 uppercase tracking-wider text-sm font-['Lexend_Exa'] bottom-[-390px] z-20 overflow-hidden">
+    <a href="../../src/pages/wine_rose.html" class="group relative flex items-center justify-between text-white no-underline px-10 py-5 uppercase tracking-wider text-sm font-['Lexend_Exa'] bottom-[-390px] z-20 overflow-hidden">
       <span class="relative z-10">Saiba Mais</span>
       <span class="absolute inset-0 bg-[#DF587D] transition-all duration-300 ease-in-out"></span>
       <span class="absolute inset-0 bg-[#B23D56] transform translate-x-full transition-all duration-300 ease-in-out group-hover:translate-x-0"></span>
     </a>
     <div class="wine-image relative z-10">
-      <img width="125px" src="/Project_PW2/public/images/wine-rose-copy.png" alt="Calem Porto Rosé Wine" class="opacity-80">
+      <img width="125px" src="../../public/images/wine-rose-copy.png" alt="Calem Porto Rosé Wine" class="opacity-80">
     </div>
     <div class="text-[200px] font-['Ibarra_Real_Nova'] font-extrabold text-[#DF587D] absolute top-20 z-0">Rosé</div>
   </footer>
@@ -301,6 +300,8 @@
     </button>
   </div>
 </div>
-    <script type="module" src="/src/main.js"></script>
+    <script type="module">
+      import '../js/cart.js';
+    </script>
 </body>
 </html>
