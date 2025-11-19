@@ -33,7 +33,7 @@ jobs:
       - name: Upload build artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./World-Wine/dist
+          path: ./dist
 
   deploy:
     runs-on: ubuntu-latest
