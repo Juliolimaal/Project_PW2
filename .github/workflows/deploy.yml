@@ -24,12 +24,10 @@ jobs:
 
       - name: Install dependencies
         run: |
-          cd World-Wine
           npm ci
 
       - name: Build site
         run: |
-          cd World-Wine
           npm run build
 
       - name: Upload build artifact
