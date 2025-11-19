@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="public/images/favicon.ico" type="image/x-icon" />
     <title>WWW</title>
     
     <link
@@ -18,7 +18,10 @@
       href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400;0,700;1,400;1,700&family=Lexend+Exa:wght@100;900&display=swap"
       rel="stylesheet"
     />
-   <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
 
 <script>
     tailwind.config = {
@@ -75,6 +78,53 @@
       .font-ibarra {
         font-family: 'Ibarra Real Nova', serif;
       }
+
+      .swiper-wrapper {
+        width: 100%;
+        height: max-content !important;
+        padding-bottom: 64px !important;
+        -webkit-transition-timing-function: linear !important;
+        transition-timing-function: linear !important;
+        position: relative;
+      }
+      
+      .swiper-pagination-bullet {
+        background: #A7AA37;
+        width: 12px;
+        height: 12px;
+      }
+      
+      .swiper-pagination-bullet-active {
+        background: #8C3A42 !important;
+      }
+
+      .swiper-slide {
+        padding: 30px 20px;
+        transition: all 0.5s ease;
+        filter: blur(3px);
+        opacity: 0.6;
+      }
+
+      .swiper-slide-active {
+        filter: blur(0px);
+        opacity: 1;
+      }
+
+      .swiper-slide-active:hover img {
+        transform: scale(1.1);
+      }
+
+      .swiper-slide:not(.swiper-slide-active):hover img {
+        transform: scale(1);
+      }
+
+      .swiper-slide img {
+        transition: transform 0.4s ease;
+      }
+
+      .swiper-slide:hover img {
+        transform: scale(1.1);
+      }
     </style>
   </head>
   <body class="m-0 p-0 box-border font-lexend">
@@ -88,9 +138,9 @@
     
         <nav class="hidden md:flex space-x-10">
           <a href="#colecao" class="hover:text-[#56070C] transition text-[#E9D0D3]">Coleções</a>
-          <a href="https://beacons.ai/julio_cesar" class="hover:text-[#56070C] transition text-[#E9D0D3]">Contato</a>
+          <a href="#" class="hover:text-[#56070C] transition text-[#E9D0D3]">Contato</a>
           <a href="#saibamais" class="hover:text-[#56070C] transition text-[#E9D0D3]">Saiba Mais</a>
-          <a href="#" class="hover:text-[#56070C] transition text-[#E9D0D3]">Comprar</a>
+          <a href="#colecao" class="hover:text-[#56070C] transition text-[#E9D0D3]">Comprar</a>
         </nav>
     
         <div class="md:hidden">
@@ -102,7 +152,7 @@
     
       
       <section class="h-screen flex items-center justify-center bg-cover bg-center" 
-              style="background-image: url('/images/bg3.jpg'); background-size: cover; background-position: center; filter: brightness(0.9);">
+              style="background-image: url('public/images/bg3.jpg'); background-size: cover; background-position: center; filter: brightness(0.9);">
         <div class="text-center px-10 md:max-w-3xl lg:max-w-4xl xl:max-w-5xl">
           <h1 class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-[#E9D0D3] font-ibarra">
             Bem-Vindos a World <span class="text-[#56070C]">Wines</span> Web
@@ -155,45 +205,61 @@
             compõem essa seleção, trazendo o melhor de cada safra. Brindar com um bom vinho é
             transformar qualquer ocasião em algo memorável.
           </p>    
-          <a
-          class="font-lexend inline-block rounded-sm bg-[#56070C] px-8 py-3 text-sm font-medium text-white transition hover:scale-110 hover:shadow-xl focus:ring-3 focus:outline-hidden"
-          href="/pages/wine_white.html"
-          >
-          Ver Coleções
-          </a>
         </div>
       </section>
 
-      <section class="wines grid grid-cols-3 place-items-center mb-24">
-        <div class="wine-white text-center px-1">
-          <a href="/src/pages/wine_white.html">
-            <img
-              src="/images/wine-white-copy.png"
-              alt="White Wine"
-              class="h-[320px] sm:h-[360px] md:h-[400px] mx-auto transition duration-500 hover:opacity-50"
-            />
-          </a>
-          <p class="text-[40px] sm:text-[45px] md:text-[50px] font-ibarra text-[#A7AA37]">White</p>
-        </div>
-        <div class="wine-red text-center px-1">
-          <a href="/src/pages/wine_red.html">
-            <img
-              src="/images/wine-tinto-copy.png"
-              alt="Red Wine"
-              class="h-[320px] sm:h-[360px] md:h-[400px] mx-auto transition duration-500 hover:opacity-50"
-            />
-          </a>
-          <p class="text-[40px] sm:text-[45px] md:text-[50px] font-ibarra text-[#8C3A42]">Red</p>
-        </div>
-        <div class="wine-rose text-center px-1">
-          <a href="/src/pages/wine_rose.html">
-            <img
-              src="/images/wine-rose-copy.png"
-              alt="Rosé Wine"
-              class="h-[320px] sm:h-[360px] md:h-[400px] mx-auto transition duration-500 hover:opacity-50"
-            />
-          </a>
-          <p class="text-[40px] sm:text-[45px] md:text-[50px] font-ibarra text-[#DF587D]">Rosé</p>
+       <!-- CAROUSEL DE VINHOS COM SWIPER -->
+      <section class="wines mb-24 py-12">
+        <div class="w-full relative max-w-7xl mx-auto px-4">
+          <div class="swiper centered-slide-carousel swiper-container relative">
+            <div class="swiper-wrapper">
+              
+              <!-- Slide 1 - Vinho Branco -->
+              <div class="swiper-slide">
+                <div class="wine-white text-center px-4">
+                  <a href="src/pages/wine_white.html">
+                    <img
+                      src="public/images/wine-white-copy.png"
+                      alt="White Wine"
+                      class="h-[320px] sm:h-[360px] md:h-[400px] mx-auto transition duration-500 hover:opacity-50 object-contain"
+                    />
+                  </a>
+                  <p class="text-[40px] sm:text-[45px] md:text-[50px] font-ibarra text-[#A7AA37] mt-4">White</p>
+                </div>
+              </div>
+              
+              <!-- Slide 2 - Vinho Tinto -->
+              <div class="swiper-slide">
+                <div class="wine-red text-center px-4">
+                  <a href="src/pages/wine_red.html">
+                    <img
+                      src="public/images/wine-tinto-copy.png"
+                      alt="Red Wine"
+                      class="h-[320px] sm:h-[360px] md:h-[400px] mx-auto transition duration-500 hover:opacity-50 object-contain"
+                    />
+                  </a>
+                  <p class="text-[40px] sm:text-[45px] md:text-[50px] font-ibarra text-[#8C3A42] mt-4">Red</p>
+                </div>
+              </div>
+              
+              <!-- Slide 3 - Vinho Rosé -->
+              <div class="swiper-slide">
+                <div class="wine-rose text-center px-4">
+                  <a href="src/pages/wine_rose.html">
+                    <img
+                      src="public/images/wine-rose-copy.png"
+                      alt="Rosé Wine"
+                      class="h-[320px] sm:h-[360px] md:h-[400px] mx-auto transition duration-500 hover:opacity-50 object-contain"
+                    />
+                  </a>
+                  <p class="text-[40px] sm:text-[45px] md:text-[50px] font-ibarra text-[#DF587D] mt-4">Rosé</p>
+                </div>
+              </div>
+              
+            </div>
+            <!-- Paginação -->
+            <div class="swiper-pagination"></div>
+          </div>
         </div>
       </section>
       <div class="center-line flex items-center justify-center mb-24">
@@ -214,7 +280,7 @@
       >
         <div class="img-sophistication">
           <img
-            src="/images/sec02.jpg"
+            src="public/images/sec02.jpg"
             alt=""
             class="w-full max-w-[400px] h-auto transition duration-500"
           />
@@ -240,7 +306,7 @@
           <ul class="text-center md:text-left">
             <li>
               <a
-                href="/pages/wine_white.html"
+                href="#colecao"
                 class="relative mt-5 text-[#310729] transition duration-300 font-semibold"
                 style="font-size: clamp(14px, 2vw, 18px);"
               >
@@ -256,7 +322,7 @@
       </div>
       
       
-<div class="relative w-full min-h-screen bg-cover bg-center bg-no-repeat bg-fixed" style="background-image: url('images/bg-quality.jpg');">
+<div class="relative w-full min-h-screen bg-cover bg-center bg-no-repeat bg-fixed" style="background-image: url('public/images/bg-quality.jpg');">
   
   <!-- Número "03" -->
 
@@ -294,7 +360,7 @@
     <!-- Plantio -->
 
     <div class="w-[270px] h-[350px] bg-[#0f0510] rounded-xl text-white text-center p-8 shadow-lg transition-transform transform hover:translate-y-[-10px]">
-      <img src="/images/plantio.png" alt="" class="w-[80px] mx-auto mb-4">
+      <img src="public/images/plantio.png" alt="" class="w-[80px] mx-auto mb-4">
       <h3 class="text-xl mb-2">Plantio</h3>
       <p class="text-[#E1D9D9] mb-6">Plantio da uva exige solo, clima, cuidado, poda, irrigação e paciência.</p>
       <a
@@ -308,7 +374,7 @@
     <!-- Colheita -->
 
     <div class="w-[270px] h-[350px] bg-[#0f0510] rounded-xl text-white text-center p-8 shadow-lg transition-transform transform hover:translate-y-[-10px]">
-      <img src="/images/colheita.png" alt="" class="w-[80px] mx-auto mb-4">
+      <img src="public/images/colheita.png" alt="" class="w-[80px] mx-auto mb-4">
       <h3 class="text-xl mb-2">Colheita</h3>
       <p class="text-[#E1D9D9] mb-6">Cada uva colhida conta uma história de tradição, paixão e tempo.</p>
       <a
@@ -322,7 +388,7 @@
     <!-- Produção -->
 
     <div class="w-[270px] h-[350px] bg-[#0f0510] rounded-xl text-white text-center p-8 shadow-lg transition-transform transform hover:translate-y-[-10px]">
-      <img src="/images/esmagamento.png" alt="" class="w-[80px] mx-auto mb-4">
+      <img src="public/images/esmagamento.png" alt="" class="w-[80px] mx-auto mb-4">
       <h3 class="text-xl mb-2">Produção</h3>
       <p class="text-[#E1D9D9] mb-6">Da uva ao vinho, arte e tradição moldam cada preciosa gota de vinho.</p>
       <a
@@ -336,7 +402,7 @@
     <!-- Venda -->
 
     <div class="w-[270px] h-[350px] bg-[#0f0510] rounded-xl text-white text-center p-8 shadow-lg transition-transform transform hover:translate-y-[-10px]">
-      <img src="/images/compras.png" alt="" class="w-[80px] mx-auto mb-4">
+      <img src="public/images/compras.png" alt="" class="w-[80px] mx-auto mb-4">
       <h3 class="text-xl mb-2">Venda</h3>
       <p class="text-[#E1D9D9] mb-6">Cada garrafa vendida leva consigo sabor, história e paixão pelo vinho.</p>
       <a
@@ -381,7 +447,7 @@
             </h2>
           </div>
           <div class="img-history flex justify-center">
-            <img src="/images/sec04.jpg" alt="" class="w-[min(40vw,340px)]" />
+            <img src="public/images/sec04.jpg" alt="" class="w-[min(40vw,340px)]" />
           </div>
         </div>
         <div
@@ -403,7 +469,7 @@
         </div>
         <div class="second grid grid-cols-1 lg:grid-cols-2 gap-5 justify-items-center mt-8">
           <div class="creator">
-            <img src="/images/cat.jpeg" alt="" class="w-[300px]" />
+            <img src="public/images/cat.jpeg" alt="" class="w-[300px]" />
           </div>
           <div
             class="text-history font-[Lexend_Exa] text-center text-[#310729] max-w-[95%]"
@@ -454,7 +520,7 @@
         </div>-->
         <div class="policies flex items-center gap-5 flex-wrap justify-center sm:justify-end">
           <p>
-            <a href="https://beacons.ai/julio_cesar" class="text-[16px] font-[Lexend_Exa] font-light text-white transition duration-500 hover:opacity-70">
+            <a href="#" class="text-[16px] font-[Lexend_Exa] font-light text-white transition duration-500 hover:opacity-70">
               Contatos
             </a>
           </p>
@@ -472,7 +538,12 @@
         </div>
       </div>
     </footer>
-    
+
+    <!-- Swiper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"></script>
+
+    <!-- Script de inicialização do Swiper -->
+    <script src="src/js/swiper-init.js"></script>
 
     <script type="module" src="/src/main.js"></script>
   </body>
