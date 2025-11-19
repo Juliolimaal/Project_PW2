@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import '/src/style.css';
 import { MobileNavBar } from "./js/components/MobileNavBar.js"
 import './js/cart.js';
@@ -18,7 +17,7 @@ investmentsGrid.innerHTML = investments
   .join('');
 
 console.log(investments);
-=======
+
 import { NotFound } from "./components/not_found";
 import { Home } from "./pages/home"
 import { WineRed } from "./pages/wine_red";
@@ -55,4 +54,3 @@ function router() {
 
 window.addEventListener("hashchange", router);
 window.addEventListener("load", router);
->>>>>>> 8800a2d410678f7534a118ef4a5a1fe15c942736

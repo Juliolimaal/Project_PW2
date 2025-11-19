@@ -1,7 +1,7 @@
 export function WineRed(){
     const element = document.createElement('div')
 
-<<<<<<<< HEAD:src/pages/wine_red.html
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,10 +26,9 @@ export function WineRed(){
 </head>
 
 <body class="m-0 p-0 box-border overflow-x-hidden">
-========
+
   element.innerHTML = `
 <div class="m-0 p-0 box-border overflow-x-hidden">
->>>>>>>> 8800a2d410678f7534a118ef4a5a1fe15c942736:src/pages/wine_red.js
 
   <nav class="flex justify-around items-center bg-white h-[15vh] font-lexend">
     <a href="#"
@@ -46,21 +45,19 @@ export function WineRed(){
         <a href="#" class="text-[#8C3A42]">contato</a>
       </li>
       <li
-<<<<<<<< HEAD:src/pages/wine_red.html
-        class="relative tracking-[3px] ml-12 after:content-[''] after:absolute after:top-full after:left-0 after:w-0 after:h-0.5fter:bg-[#8C3A42] after:transition-all after:duration-300 hover:after:w-full">
-        <a href="#" class="text-[#8C3A42]">saiba mais</a>
+        class="relative tracking-[3px] ml-12 after:content-[''] after:absolute after:top-full after:left-0 after:w-0 after:h-[2px] after:bg-[#8C3A42] after:transition-all after:duration-300 hover:after:w-full">
+        <a href="../#saibamais" class="text-[#8C3A42]">saiba mais</a>
       </li>
       <li
-        class="relative tracking-[3px] ml-12 after:content-[''] after:absolute after:top-full after:left-0 after:w-0 after:h-0.5 after:bg-[#8C3A42] after:transition-all after:duration-300 hover:after:w-full">
+        class="relative tracking-[3px] ml-12 after:content-[''] after:absolute after:top-full after:left-0 after:w-0 after:h-[2px] after:bg-[#8C3A42] after:transition-all after:duration-300 hover:after:w-full">
         <a href="#" class="text-[#8C3A42]">comprar</a>
-========
+
         class="relative tracking-[3px] ml-12 after:content-[''] after:absolute after:top-full after:left-0 after:w-0 after:h-[2px] after:bg-[#8C3A42] after:transition-all after:duration-300 hover:after:w-full">
         <a href="../#saibamais" class="text-[#8C3A42]">saiba mais</a>
       </li>
       <li
         class="relative tracking-[3px] ml-12 after:content-[''] after:absolute after:top-full after:left-0 after:w-0 after:h-[2px] after:bg-[#8C3A42] after:transition-all after:duration-300 hover:after:w-full">
         <a href="../#colecao" class="text-[#8C3A42]">comprar</a>
->>>>>>>> 8800a2d410678f7534a118ef4a5a1fe15c942736:src/pages/wine_red.js
       </li>
     </ul>
 
@@ -324,4 +321,3 @@ export function WineRed(){
 </div>`
 return element
 } 
->>>>>>>> 8800a2d410678f7534a118ef4a5a1fe15c942736:src/pages/wine_red.js

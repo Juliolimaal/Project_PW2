@@ -1,7 +1,7 @@
 export function WineWhite() {
     const element = document.createElement('div')
 
-<<<<<<<< HEAD:src/pages/wine_white.html
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,7 +29,6 @@ export function WineWhite() {
 ========
   element.innerHTML = `
 <div class="m-0 p-0 box-border overflow-x-hidden">
->>>>>>>> 8800a2d410678f7534a118ef4a5a1fe15c942736:src/pages/wine_white.js
 
   <nav class="flex justify-around items-center bg-white h-[15vh] font-lexend">
     <a href="#"
@@ -46,21 +45,16 @@ export function WineWhite() {
         <a href="#" class="text-[#A7AA37]">contato</a>
       </li>
       <li
-<<<<<<<< HEAD:src/pages/wine_white.html
-        class="relative tracking-[3px] ml-12 after:content-[''] after:absolute after:top-full after:left-0 after:w-0 after:h-0.5fter:bg-[#A7AA37] after:transition-all after:duration-300 hover:after:w-full">
-        <a href="#" class="text-[#A7AA37]">saiba mais</a>
-      </li>
-      <li
-        class="relative tracking-[3px] ml-12 after:content-[''] after:absolute after:top-full after:left-0 after:w-0 after:h-0.5 after:bg-[#A7AA37] after:transition-all after:duration-300 hover:after:w-full">
-        <a href="#" class="text-[#A7AA37]">comprar</a>
-========
         class="relative tracking-[3px] ml-12 after:content-[''] after:absolute after:top-full after:left-0 after:w-0 after:h-[2px] after:bg-[#A7AA37] after:transition-all after:duration-300 hover:after:w-full">
         <a href="../#saibamais" class="text-[#A7AA37]">saiba mais</a>
       </li>
       <li
         class="relative tracking-[3px] ml-12 after:content-[''] after:absolute after:top-full after:left-0 after:w-0 after:h-[2px] after:bg-[#A7AA37] after:transition-all after:duration-300 hover:after:w-full">
         <a href="../#colecao" class="text-[#A7AA37]">comprar</a>
->>>>>>>> 8800a2d410678f7534a118ef4a5a1fe15c942736:src/pages/wine_white.js
+      <li
+        class="relative tracking-[3px] ml-12 after:content-[''] after:absolute after:top-full after:left-0 after:w-0 after:h-[2px] after:bg-[#A7AA37] after:transition-all after:duration-300 hover:after:w-full">
+        <a href="../#colecao" class="text-[#A7AA37]">comprar</a>
+
       </li>
     </ul>
 
@@ -319,7 +313,7 @@ export function WineWhite() {
     </button>
   </div>
 </div>
-<<<<<<<< HEAD:src/pages/wine_white.html
+
     <script type="module" src="/src/main.js"></script>
 </body>
 </html>
@@ -328,4 +322,3 @@ export function WineWhite() {
 </div>`
 return element
 }
->>>>>>>> 8800a2d410678f7534a118ef4a5a1fe15c942736:src/pages/wine_white.js
