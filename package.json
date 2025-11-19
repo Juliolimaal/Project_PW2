@@ -1,9 +1,6 @@
 {
-<<<<<<< HEAD
   "name": "proje_pw2",
-=======
-  "name": "vite-project",
->>>>>>> 8800a2d410678f7534a118ef4a5a1fe15c942736
+
   "private": true,
   "version": "0.0.0",
   "type": "module",
