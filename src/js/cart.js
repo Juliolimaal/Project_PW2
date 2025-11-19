@@ -45,7 +45,7 @@ function updateCartCount() {
   cartCountEl.textContent = cart.reduce((acc, item) => acc + item.qty, 0);
 }
 
-// --- Definição única e correta da função renderCart() ---
+
 function renderCart() {
   cartItemsEl.innerHTML = cart.map(item => `
     <li class="flex justify-between items-center border-b border-gray-300 pb-2">
@@ -62,6 +62,7 @@ function renderCart() {
   const total = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
   cartTotalEl.textContent = `Total: R$ ${total.toFixed(2)}`;
   updateCartCount();
+  
   // Mostrar vinho mais vendido
 const topWineMsgEl = document.getElementById("top-wine-msg");
 if (cart.length > 0) {
@@ -77,7 +78,6 @@ if (cart.length > 0) {
 
   localStorage.setItem('cart', JSON.stringify(cart));
 }
-// --------------------------------------------------------
 
 function addToCart(name, price) {
   const existing = cart.find(item => item.name === name);
@@ -111,7 +111,7 @@ cartIcon.addEventListener("click", () => {
 
   if (!stat) return;
 
-  alert(
+  console.log(
     `🍷 Vinho mais comprado até agora:\n\n` +
     `⭐ ${stat.name}\n` +
     `🛒 ${stat.count} vendas\n` +
