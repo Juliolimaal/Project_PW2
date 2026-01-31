@@ -13,7 +13,7 @@ export default function WineCarrossel() {
         spaceBetween={30}
         slidesPerView={1}
         centeredSlides={true}  
-        loop={true}            
+        loop={false}            
         grabCursor={true}      
         pagination={{ clickable: true }}
         breakpoints={{
@@ -37,15 +37,15 @@ export default function WineCarrossel() {
         {/* Slide 2 - Red */}
         <SwiperSlide className="pb-12">
            <div className="text-center px-4 group">
-            <Link href="/wine_red">
-              <div className="h-[400px] relative transition duration-500 hover:scale-105 flex justify-center items-center">
+            <Link href="/red">
+              <div className="h-[400px] relative transition duration-500 hover:scale-105 flex justify-center items-center cursor-pointer">
                  <img src="/images/wine-tinto-copy.png" alt="Red Wine" className="h-full object-contain" />
               </div>
             </Link>
             <p className="text-[50px] font-ibarra text-[#8C3A42] mt-4">Red</p>
           </div>
         </SwiperSlide>
-
+        
         {/* Slide 3 - Rosé */}
         <SwiperSlide className="pb-12">
            <div className="text-center px-4 group">

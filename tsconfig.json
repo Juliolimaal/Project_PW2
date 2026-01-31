@@ -5,7 +5,12 @@
       "dom",
       "dom.iterable",
       "esnext"
-    ],
+
+      ],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
@@ -30,7 +35,7 @@
     "**/*.mts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "src/app/red/page.jsx"  ],
   "exclude": [
     "node_modules"
   ]

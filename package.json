@@ -1,5 +1,5 @@
 {
-  "name": "teste",
+  "name": "project_pw2",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.93.2",
+    "aos": "^2.3.4",
     "next": "16.1.3",
     "react": "19.2.3",
     "react-dom": "19.2.3",
@@ -22,5 +23,13 @@
     "babel-plugin-react-compiler": "1.0.0",
     "tailwindcss": "^4",
     "typescript": "5.9.3"
+  },
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    }
   }
 }

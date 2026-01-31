@@ -3,7 +3,6 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import './globals.css'
 
-
 const lexend = Lexend_Exa({ 
   subsets: ['latin'], 
   variable: '--font-lexend',
@@ -24,6 +23,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="pt-br" className={`${lexend.variable} ${ibarra.variable}`}>
+      <head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+      </head>
+      
       <body className="bg-[#0f0510] text-white font-lexend m-0 p-0 box-border">
         <Navbar />
         {children}
