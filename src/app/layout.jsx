@@ -1,6 +1,8 @@
 import { Lexend_Exa, Ibarra_Real_Nova } from 'next/font/google'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+import CartSidebar from './components/CartSidebar'
+import { CartProvider } from './contexts/CartContext'
 import './globals.css'
 
 const lexend = Lexend_Exa({ 
@@ -28,9 +30,13 @@ export default function RootLayout({ children }) {
       </head>
       
       <body className="bg-[#0f0510] text-white font-lexend m-0 p-0 box-border">
-        <Navbar />
-        {children}
-        <Footer />
+        {/* Envolvendo tudo com o Provider do Carrinho */}
+        <CartProvider>
+          <Navbar />
+          <CartSidebar /> {/* Barra lateral adicionada */}
+          {children}
+          <Footer />
+        </CartProvider>
       </body>
     </html>
   )

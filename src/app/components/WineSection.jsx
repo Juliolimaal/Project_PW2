@@ -1,4 +1,6 @@
+'use client'
 import Image from 'next/image'
+import { useCart } from '../contexts/CartContext' // Importa o contexto
 
 export default function WineSection({ 
   title, 
@@ -10,6 +12,9 @@ export default function WineSection({
   showIcons = false,
   showDocg = false   
 }) {
+  
+  const { addToCart } = useCart()
+
   return (
     <section className="py-12">
       
@@ -53,10 +58,10 @@ export default function WineSection({
           </p>
           
           <div className="flex gap-5 md:gap-10">
+            
             <button 
-              className="flex gap-2.5 bg-[#8C3A42] text-white px-8 py-2.5 transition duration-500 hover:bg-white hover:text-[#8C3A42] hover:border hover:border-[#8C3A42] cursor-pointer items-center border border-transparent"
-              // Aqui você ligaria a lógica do carrinho depois
-              onClick={() => console.log(`Comprar ${title} - R$ ${price}`)}
+              className="flex gap-2.5 bg-[#8C3A42] text-white px-8 py-2.5 transition duration-500 hover:bg-white hover:text-[#8C3A42] hover:border hover:border-[#8C3A42] cursor-pointer items-center border border-transparent rounded-sm"
+              onClick={() => addToCart({ name: title, price: Number(price), image: imageSrc })}
             >
               <span className="material-symbols-outlined">shopping_bag</span>
               <span>comprar</span>
