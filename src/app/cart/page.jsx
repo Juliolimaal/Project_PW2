@@ -1,4 +1,3 @@
-import { recordSale, getMostPurchased } from "./statistics.js";
 const cartIcon = document.getElementById('cart-icon');
 const cartPanel = document.getElementById('cart-panel');
 const cartItemsEl = document.getElementById('cart-items');
