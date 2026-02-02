@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+
+.nav-list li a::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #fff;
+  transition: 0.3s;
+}
+.nav-list li a:hover::before {
+  width: 100%;
+}
+
+.sophistication .text-sophistication ul li a::before,
+.history .data ul li a::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #310729;
+  transition: 0.3s;
+}
+.sophistication .text-sophistication ul li a:hover::before,
+.history .data ul li a:hover::before {
+  width: 100%;
+}
+
+.font-lexend {
+  font-family: 'Lexend Exa', sans-serif;
+}
+
+.font-ibarra {
+  font-family: 'Ibarra Real Nova', serif;
+}
+
+/* Adicione estilos Swiper se não estiverem no original */
+.swiper-wrapper {
+  width: 100%;
+  height: max-content !important;
+  padding-bottom: 64px !important;
+  -webkit-transition-timing-function: linear !important;
+  transition-timing-function: linear !important;
+  position: relative;
+}
+
+.swiper-pagination-bullet {
+  background: #A7AA37;
+  width: 12px;
+  height: 12px;
+}
+
+.swiper-pagination-bullet-active {
+  background: #8C3A42 !important;
+}
+
+.swiper-slide {
+  padding: 30px 20px;
+  transition: all 0.5s ease;
+  filter: blur(3px);
+  opacity: 0.6;
+}
+
+.swiper-slide-active {
+  filter: blur(0px);
+  opacity: 1;
+}
+
+.swiper-slide-active:hover img {
+  transform: scale(1.1);
+}
+
+.swiper-slide:not(.swiper-slide-active):hover img {
+  transform: scale(1);
+}
+
+.swiper-slide img {
+  transition: transform 0.4s ease;
+}
+
+.swiper-slide:hover img {
+  transform: scale(1.1);
+}
