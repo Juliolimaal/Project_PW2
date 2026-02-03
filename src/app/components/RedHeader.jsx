@@ -12,14 +12,14 @@ export default function RedHeader() {
         Red
       </h1>
       <p 
-        className="font-lexend text-xl md:text-2xl max-w-3xl px-4 font-semibold text-center text-[#8C3A42] mb-8 leading-relaxed tracking-wide" 
+        className="font-lexend text-xl md:text-1xl max-w-3xl px-4 font-semibold text-center text-[#8C3A42] mb-8 leading-relaxed tracking-wide" 
         data-aos="fade-up" data-aos-duration="1500" data-aos-easing="linear"
       >
         Envelhece em barricas de carvalho e garrafa, ganhando suavidade, complexidade e aromas elegantes com o tempo.
       </p>
 
       <p 
-        className="font-lexend text-xl md:text-2xl max-w-2xl px-4 font-semibold text-center text-[#8C3A42] mb-12 leading-relaxed tracking-wide" 
+        className="font-lexend text-xl md:text-1xl max-w-2xl px-4 font-semibold text-center text-[#8C3A42] mb-12 leading-relaxed tracking-wide" 
         data-aos="fade-up" data-aos-duration="1500" data-aos-easing="linear"
       >
         De cor rubi profunda, revela aromas de frutas maduras e especiarias. Encorpado e equilibrado, possui taninos aveludados e final elegante.
