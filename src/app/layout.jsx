@@ -30,10 +30,10 @@ export default function RootLayout({ children }) {
       </head>
       
       <body className="bg-[#0f0510] text-white font-lexend m-0 p-0 box-border">
-        {/* Envolvendo tudo com o Provider do Carrinho */}
+        {}
         <CartProvider>
           <Navbar />
-          <CartSidebar /> {/* Barra lateral adicionada */}
+          <CartSidebar /> {}
           {children}
           <Footer />
         </CartProvider>

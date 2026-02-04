@@ -9,7 +9,7 @@ export default function Footer() {
   // O componente vai checar se a URL atual é alguma dessas
   const paginasSemFooter = ['/red', '/white', '/rose']
 
-  // Se a página atual estiver na lista, retorna null (não desenha nada)
+  
   if (paginasSemFooter.includes(pathname)) {
     return null
   }

@@ -1,6 +1,6 @@
 'use client'
 import Image from 'next/image'
-import { useCart } from '../contexts/CartContext' // Importa o contexto
+import { useCart } from '../contexts/CartContext'
 
 export default function WineSection({ 
   title, 

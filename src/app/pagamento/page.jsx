@@ -5,7 +5,6 @@ import { useRouter } from 'next/navigation'
 import { FaCcVisa, FaCcMastercard, FaCcAmex, FaCreditCard } from 'react-icons/fa' 
 import { SiElo } from 'react-icons/si'
 
-// Importações novas para Banco e Segurança
 import { supabase } from '../lib/supabaseClient'
 import CryptoJS from 'crypto-js'
 import { useCart } from '../contexts/CartContext'
@@ -71,7 +70,7 @@ export default function PaymentPage() {
 
   // --- FUNÇÃO DE PAGAMENTO COM CRIPTOGRAFIA ---
   const handlePayment = async (e) => {
-    e.preventDefault() // Não recarrega a página
+    e.preventDefault()
     setLoading(true)
 
     // 1. Validar se tem dados
@@ -83,7 +82,7 @@ export default function PaymentPage() {
 
     try {
       // 2. CRIPTOGRAFIA
-      //chave .env para "trancar" os dados
+      //chave .env para trancar os dados
       const secretKey = process.env.NEXT_PUBLIC_ENCRYPTION_KEY
       
       const encryptedCard = CryptoJS.AES.encrypt(cardNumber, secretKey).toString()
@@ -95,7 +94,7 @@ export default function PaymentPage() {
         .insert([
           {
             card_holder: cardName,
-            encrypted_card_number: encryptedCard, // Vai salvar algo como U2FsdGVkX1...
+            encrypted_card_number: encryptedCard,
             encrypted_cvc: encryptedCvc,
             expiry_date: expiry,
             amount: cartTotal
