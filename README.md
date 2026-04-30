@@ -1,61 +1,96 @@
-🍷 World Wines Web (WWW)
-<p align="center"> <img src="./preview.png" alt="Preview do projeto" width="800"/> </p>
+# 🍷 World Wines Web (WWW)
 
-World Wines Web é uma plataforma moderna de e-commerce dedicada à venda de vinhos exclusivos. O projeto foi desenvolvido com foco em uma experiência de usuário (UX) fluida, oferecendo animações suaves, carrinho persistente e uma interface de pagamento interativa e intuitiva.
+<p align="center">
+  <img src="./preview.png" alt="Preview do projeto" width="800"/>
+</p>
 
-🚀 Tecnologias Utilizadas
+**World Wines Web** é uma plataforma moderna de e-commerce dedicada à venda de vinhos exclusivos. O projeto foi desenvolvido com foco em uma experiência de usuário (UX) fluida, oferecendo animações suaves, carrinho persistente e uma interface de pagamento interativa e intuitiva.
 
-Framework: Next.js 16 (App Router)
-Estilização: Tailwind CSS v4
-Banco de Dados: Supabase (PostgreSQL)
-Ícones: React Icons & Material Symbols
-Animações: AOS (Animate On Scroll)
-Gerenciamento de Estado: React Context API
+---
 
-✨ Funcionalidades Principais
+## 🚀 Tecnologias Utilizadas
 
-🛒 Carrinho de Compras Inteligente
-Adição e remoção de itens em tempo real
-Cálculo automático de totais
-Persistência de dados (LocalStorage)
-Sidebar moderna com animação deslizante
+- **Framework:** Next.js 16 (App Router)
+- **Estilização:** Tailwind CSS v4
+- **Banco de Dados:** Supabase (PostgreSQL)
+- **Ícones:** React Icons & Material Symbols
+- **Animações:** AOS (Animate On Scroll)
+- **Gerenciamento de Estado:** React Context API
 
-💳 Página de Pagamento Interativa
+---
 
-Cartão virtual dinâmico
-Identificação automática de bandeira (Visa, MasterCard, Elo, Amex)
-Máscaras de input para formatação
+## ✨ Funcionalidades Principais
 
-📱 Design Responsivo
+### 🛒 Carrinho de Compras Inteligente
 
-Adaptado para celulares, tablets e desktops
-Menu mobile animado
+- Adição e remoção de itens em tempo real
+- Cálculo automático de totais
+- Persistência de dados (LocalStorage)
+- Sidebar moderna com animação deslizante
 
-🗄️ Integração com Backend (Supabase)
+### 💳 Página de Pagamento Interativa
 
-Leitura de produtos e usuários
-Banco de dados relacional (SQL)
+- Cartão virtual dinâmico
+- Identificação automática de bandeira (Visa, MasterCard, Elo, Amex)
+- Máscaras de input para formatação
 
-🛠️ Como rodar o projeto localmente
+### 📱 Design Responsivo
 
-1. Clone o repositório
+- Adaptado para celulares, tablets e desktops
+- Menu mobile animado
+
+### 🗄️ Integração com Backend (Supabase)
+
+- Leitura de produtos e usuários
+- Banco de dados relacional (SQL)
+
+---
+
+## 🛠️ Como rodar o projeto localmente
+
+### 1. Clone o repositório
+
+```bash
 git clone https://github.com/seu-usuario/World-Wine.git
 cd World-Wine
-2. Instale as dependências
+```
+
+### 2. Instale as dependências
+
+```bash
 npm install
-# ou
+```
+
+ou
+
+```bash
 yarn install
-3. Configure as variáveis de ambiente
+```
 
-Crie um arquivo .env.local:
+### 3. Configure as variáveis de ambiente
 
+Crie um arquivo `.env.local`
+
+```env
 NEXT_PUBLIC_SUPABASE_URL=your_url
 NEXT_PUBLIC_SUPABASE_ANON_KEY=your_key
-4. Execute o projeto
+```
+
+### 4. Execute o projeto
+
+```bash
 npm run dev
+```
 
-Acesse: http://localhost:3000
+Acesse:
 
-📌 Observações
-Node.js recomendado: 18+
-Configure o Supabase antes de rodar
+```text
+http://localhost:3000
+```
+
+---
+
+## 📌 Observações
+
+- Node.js 18+
+- Configure o Supabase antes de rodar
