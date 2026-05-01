@@ -18,9 +18,12 @@ const ibarra = Ibarra_Real_Nova({
 })
 
 export const metadata = {
-  title: 'World Wines Web',
+  title: 'World Wines',
   description: 'A melhor adega online',
-}
+  icons: {
+    icon: "/images/favicon.ico",
+  },
+};
 
 export default function RootLayout({ children }) {
   return (
