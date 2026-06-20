@@ -1,4 +1,5 @@
 import { Lexend_Exa, Ibarra_Real_Nova } from 'next/font/google'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import CartSidebar from './components/CartSidebar'
@@ -40,6 +41,7 @@ export default function RootLayout({ children }) {
           {children}
           <Footer />
         </CartProvider>
+        <SpeedInsights />
       </body>
     </html>
   )
