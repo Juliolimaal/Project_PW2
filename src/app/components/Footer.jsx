@@ -26,47 +26,66 @@ export default function Footer() {
   }
 
   const handleNewsletter = async () => {
-    if (!email.trim()) {
-      setMessage('Digite seu e-mail.')
-      return
-    }
-
-    const emailValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-
-    if (!emailValido.test(email)) {
-      setMessage('Digite um e-mail válido.')
-      return
-    }
-
-    try {
-      setLoading(true)
-      setMessage('')
-
-      const { error } = await supabase
-        .from('newsletter')
-        .insert([{ email }])
-
-      if (error) {
-        if (
-          error.message.includes('duplicate') ||
-          error.message.includes('unique')
-        ) {
-          setMessage('Esse e-mail já está cadastrado.')
-        } else {
-          setMessage('Erro ao cadastrar.')
-        }
-        return
-      }
-
-      setMessage('Cadastro realizado com sucesso!')
-      setEmail('')
-    } catch (error) {
-      setMessage('Erro inesperado.')
-    } finally {
-      setLoading(false)
-    }
+  if (!email.trim()) {
+    setMessage('Digite seu e-mail.')
+    return
   }
 
+  const emailValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+
+  if (!emailValido.test(email)) {
+    setMessage('Digite um e-mail válido.')
+    return
+  }
+
+  try {
+    setLoading(true)
+    setMessage('')
+
+    const { error } = await supabase
+      .from('newsletter')
+      .insert([{ email }])
+
+
+    if (error) {
+      if (
+        error.message.includes('duplicate') ||
+        error.message.includes('unique')
+      ) {
+        setMessage('Esse e-mail já está cadastrado.')
+      } else {
+        setMessage('Erro ao cadastrar.')
+      }
+      return
+    }
+
+
+    await fetch('/api/send-email', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        email,
+      }),
+    })
+
+
+    setMessage('Cadastro realizado com sucesso! Verifique seu e-mail.')
+    setEmail('')
+
+
+  } catch (error) {
+
+    console.error(error)
+    setMessage('Erro inesperado.')
+
+  } finally {
+
+    setLoading(false)
+
+  }
+}
   return (
     <footer className="relative mt-24 overflow-hidden border-t border-white/10 bg-[#09040a] text-white">
 
