@@ -1,0 +1,17 @@
+.admin-page { min-height:55vh; padding-top:3.5rem; }
+.admin-page h1 { color:#310729; font-size:3rem; margin:.3rem 0; }
+.intro, .status { color:#675b5b; font-size:.8rem; }
+.status { padding:.7rem; background:#f2e8e4; }
+.admin-layout { display:grid; grid-template-columns:1fr 1fr; align-items:start; gap:1.5rem; margin-top:2rem; }
+form, .wine-list { background:#fff; border:1px solid #eadfe0; padding:1.4rem; }
+form { display:grid; gap:.85rem; }
+form h2, .wine-list h2 { color:#310729; font-size:1.6rem; margin:.1rem 0 .5rem; }
+label { display:grid; gap:.35rem; font-size:.75rem; color:#310729; }
+input, select, textarea { width:100%; border:1px solid #d8c9c9; padding:.65rem; background:#fdfbf7; }
+form .primary-button { justify-self:start; }
+.wine-row { display:flex; justify-content:space-between; align-items:center; gap:1rem; padding:.9rem 0; border-bottom:1px solid #eadfe0; }
+.wine-row div { display:grid; gap:.2rem; }
+.wine-row strong { color:#310729; font:1.2rem 'Ibarra Real Nova',serif; }
+.wine-row span { color:#675b5b; font-size:.68rem; }
+.wine-row button { border:1px solid #8c3a42; background:white; color:#8c3a42; padding:.5rem .7rem; font-size:.68rem; }
+@media(max-width:760px) { .admin-layout { grid-template-columns:1fr; } }

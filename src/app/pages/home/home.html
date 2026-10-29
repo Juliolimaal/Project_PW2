@@ -1,0 +1,33 @@
+<main>
+  <section class="hero">
+    <div class="hero-image"></div>
+    <div class="page-wrap hero-content">
+      <p class="section-kicker">Uma escolha para cada ocasião</p>
+      <h1>O prazer de<br><em>brindar bem.</em></h1>
+      <p>Vinhos selecionados para acompanhar histórias, encontros e bons momentos.</p>
+      <a class="primary-button" routerLink="/vinhos">Conheça a coleção <span class="material-symbols-outlined">arrow_forward</span></a>
+    </div>
+    <span class="hero-note">WORLD WINES · DESDE 2024</span>
+  </section>
+
+  <section class="collection page-wrap" id="colecao">
+    <div class="section-heading">
+      <div><p class="section-kicker">Nossa seleção</p><h2>Vinhos para descobrir</h2></div>
+      <a routerLink="/vinhos">Ver coleção completa <span class="material-symbols-outlined">north_east</span></a>
+    </div>
+    @if (wines.message()) { <p class="status-note">{{ wines.message() }}</p> }
+    @if (wines.loading()) { <p class="status-note">Carregando catálogo...</p> }
+    <div class="wine-grid">
+      @for (wine of wines.wines().slice(0, 3); track wine.id) {
+        <app-wine-card [wine]="wine" (add)="addToCart($event)" />
+      }
+    </div>
+  </section>
+
+  <section class="story">
+    <div class="page-wrap story-inner">
+      <div><p class="section-kicker">A mesa fica melhor assim</p><h2>Escolhas feitas<br>para compartilhar.</h2></div>
+      <p>Reunimos rótulos tintos, brancos e rosés para acompanhar diferentes pratos e momentos. Explore a coleção e encontre o próximo vinho para a sua mesa.</p>
+    </div>
+  </section>
+</main>

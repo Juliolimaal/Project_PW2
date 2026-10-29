@@ -1,0 +1,7 @@
+.catalog-page { padding-top:4rem; padding-bottom:2rem; }
+.catalog-heading { text-align:center; padding:2rem 0 3rem; }
+.catalog-heading h1 { color:#310729; font-size:clamp(3rem,7vw,5rem); margin:.35rem 0; }
+.catalog-heading > p:last-child { color:#675b5b; font-size:.85rem; }
+.wine-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1.2rem; }
+.status-note { color:#715b5d; font-size:.76rem; }
+@media(max-width:760px) { .wine-grid { grid-template-columns:1fr; } }
