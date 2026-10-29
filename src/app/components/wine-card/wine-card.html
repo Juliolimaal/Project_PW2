@@ -1,0 +1,17 @@
+<article class="wine-card">
+  <div class="bottle-wrap">
+    <img [src]="wine.image" [alt]="wine.name" loading="lazy">
+    <span class="category">{{ wine.category }}</span>
+  </div>
+  <div class="wine-info">
+    <p class="section-kicker">World Wines · Seleção</p>
+    <h3>{{ wine.name }}</h3>
+    <p class="description">{{ wine.description }}</p>
+    <div class="card-bottom">
+      <strong>{{ wine.price | currency:'BRL':'symbol':'1.2-2':'pt-BR' }}</strong>
+      <button type="button" (click)="add.emit(wine)" aria-label="Adicionar {{ wine.name }} ao carrinho">
+        <span class="material-symbols-outlined">add_shopping_cart</span> Comprar
+      </button>
+    </div>
+  </div>
+</article>

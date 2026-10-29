@@ -1,0 +1,24 @@
+<main class="page-wrap cart-page">
+  <p class="section-kicker">Sua seleção</p>
+  <h1>Seu carrinho</h1>
+  @if (cart.items().length === 0) {
+    <div class="empty-cart"><p>Seu carrinho está vazio.</p><a class="primary-button" routerLink="/vinhos">Explorar vinhos</a></div>
+  } @else {
+    <div class="cart-layout">
+      <ul class="cart-list">
+        @for (item of cart.items(); track item.wine.id) {
+          <li class="cart-row">
+            <img [src]="item.wine.image" [alt]="item.wine.name">
+            <div class="item-description"><h2>{{ item.wine.name }}</h2><p>{{ item.wine.category }} · {{ item.quantity }} unidade(s)</p></div>
+            <strong>{{ item.wine.price * item.quantity | currency:'BRL':'symbol':'1.2-2':'pt-BR' }}</strong>
+            <button type="button" (click)="cart.remove(item.wine.id)" aria-label="Remover {{ item.wine.name }}">Remover</button>
+          </li>
+        }
+      </ul>
+      <aside class="cart-summary">
+        <p>Total do pedido <strong>{{ cart.total() | currency:'BRL':'symbol':'1.2-2':'pt-BR' }}</strong></p>
+        <a class="primary-button" routerLink="/pagamento">Continuar para pagamento</a>
+      </aside>
+    </div>
+  }
+</main>

@@ -1,0 +1,16 @@
+<main class="page-wrap catalog-page">
+  <header class="catalog-heading">
+    <p class="section-kicker">World Wines · Catálogo</p>
+    <h1>A coleção</h1>
+    <p>Escolha seu próximo rótulo entre tintos, brancos e rosés.</p>
+  </header>
+  @if (catalog.message()) { <p class="status-note">{{ catalog.message() }}</p> }
+  @if (catalog.loading()) { <p class="status-note">Carregando catálogo...</p> }
+  <div class="wine-grid">
+    @for (wine of catalog.wines(); track wine.id) {
+      <app-wine-card [wine]="wine" (add)="addToCart($event)" />
+    } @empty {
+      <p>Nenhum vinho cadastrado ainda.</p>
+    }
+  </div>
+</main>

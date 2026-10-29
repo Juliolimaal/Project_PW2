@@ -1,0 +1,35 @@
+<main class="page-wrap admin-page">
+  <p class="section-kicker">Catálogo</p>
+  <h1>Gerenciar vinhos</h1>
+  <p class="intro">Cadastre ou remova itens da tabela <code>wines</code> no Supabase.</p>
+  @if (status()) { <p class="status">{{ status() }}</p> }
+  @if (!catalog.loading() && catalog.message()) { <p class="status">{{ catalog.message() }}</p> }
+
+  <div class="admin-layout">
+    <form [formGroup]="wineForm" (ngSubmit)="createWine()">
+      <h2>Novo vinho</h2>
+      <label>Nome<input type="text" formControlName="name"></label>
+      <label>Categoria
+        <select formControlName="category">
+          <option>Tinto</option><option>Branco</option><option>Rosé</option>
+        </select>
+      </label>
+      <label>Descrição<textarea rows="3" formControlName="description"></textarea></label>
+      <label>Preço<input type="number" min="0.01" step="0.01" formControlName="price"></label>
+      <label>Caminho da imagem<input type="text" formControlName="image"></label>
+      <button class="primary-button" type="submit">Cadastrar vinho</button>
+    </form>
+
+    <section class="wine-list">
+      <h2>Vinhos cadastrados</h2>
+      @for (wine of catalog.wines(); track wine.id) {
+        <article class="wine-row">
+          <div><strong>{{ wine.name }}</strong><span>{{ wine.category }} · {{ wine.price | currency:'BRL':'symbol':'1.2-2':'pt-BR' }}</span></div>
+          <button type="button" (click)="deleteWine(wine.id)">Excluir</button>
+        </article>
+      } @empty {
+        <p>Nenhum vinho encontrado.</p>
+      }
+    </section>
+  </div>
+</main>

@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: light;
+  --wine: #56070c;
+  --wine-dark: #310729;
+  --wine-muted: #8c3a42;
+  --paper: #fdfbf7;
+  --ink: #2c2022;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'Lexend Exa', sans-serif;
+}
+h1, h2, h3, .font-ibarra { font-family: 'Ibarra Real Nova', serif; }
+button, a { -webkit-tap-highlight-color: transparent; }
+button { cursor: pointer; }
+.material-symbols-outlined { font-family: 'Material Symbols Outlined'; font-weight: normal; }
+.page-wrap { width: min(1180px, calc(100% - 40px)); margin: 0 auto; }
+.section-kicker { color: var(--wine-muted); letter-spacing: .18em; text-transform: uppercase; font-size: .72rem; }
+.primary-button {
+  display: inline-flex; align-items: center; justify-content: center; gap: .55rem;
+  border: 1px solid var(--wine); background: var(--wine); color: white;
+  padding: .8rem 1.25rem; text-decoration: none; transition: .2s ease;
+}
+.primary-button:hover { background: white; color: var(--wine); }
+input, select, textarea { font: inherit; }
+:focus-visible { outline: 3px solid #b99952; outline-offset: 3px; }

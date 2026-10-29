@@ -1,96 +1,52 @@
-# 🍷 World Wines Web (WWW)
+# World Wines
 
-<p align="center">
-  <img src="./preview.png" alt="Preview do projeto" width="800"/>
-</p>
+Loja de vinhos migrada para Angular 22, com estrutura baseada no exemplo de portfolio do professor. O catálogo usa a tabela `wines` do Supabase quando as credenciais estão configuradas. Sem conexão, o catálogo mostra os produtos locais do próprio projeto.
 
-**World Wines Web** é uma plataforma moderna de e-commerce dedicada à venda de vinhos exclusivos. O projeto foi desenvolvido com foco em uma experiência de usuário (UX) fluida, oferecendo animações suaves, carrinho persistente e uma interface de pagamento interativa e intuitiva.
+## Rodar localmente
 
----
+1. Instale Node.js e npm.
+2. Copie `src/environments/environment.development.example.ts` para `src/environments/environment.development.ts` e preencha a URL do projeto Supabase e a chave anon.
+3. No Supabase, crie uma tabela `wines` com as colunas `id` (text, primary key), `name` (text), `category` (text), `description` (text), `price` (numeric) e `image` (text). Configure as políticas RLS para permitir leitura pública; restrinja inclusão e exclusão a usuários autorizados antes de publicar.
+4. Execute `npm install` e `npm start`.
+5. Abra `http://localhost:4200`.
 
-## 🚀 Tecnologias Utilizadas
+A inclusão e remoção no painel `/admin` usam POST e DELETE do Supabase. Esses controles servem para a atividade; em produção, o acesso de escrita deve ser protegido por autenticação e políticas RLS. Não coloque a chave service_role no frontend.
 
-- **Framework:** Next.js 16 (App Router)
-- **Estilização:** Tailwind CSS v4
-- **Banco de Dados:** Supabase (PostgreSQL)
-- **Ícones:** React Icons & Material Symbols
-- **Animações:** AOS (Animate On Scroll)
-- **Gerenciamento de Estado:** React Context API
+## Estrutura
 
----
-
-## ✨ Funcionalidades Principais
-
-### 🛒 Carrinho de Compras Inteligente
-
-- Adição e remoção de itens em tempo real
-- Cálculo automático de totais
-- Persistência de dados (LocalStorage)
-- Sidebar moderna com animação deslizante
-
-### 💳 Página de Pagamento Interativa
-
-- Cartão virtual dinâmico
-- Identificação automática de bandeira (Visa, MasterCard, Elo, Amex)
-- Máscaras de input para formatação
-
-### 📱 Design Responsivo
-
-- Adaptado para celulares, tablets e desktops
-- Menu mobile animado
-
-### 🗄️ Integração com Backend (Supabase)
-
-- Leitura de produtos e usuários
-- Banco de dados relacional (SQL)
-
----
-
-## 🛠️ Como rodar o projeto localmente
-
-### 1. Clone o repositório
-
-```bash
-git clone https://github.com/seu-usuario/World-Wine.git
-cd World-Wine
+```
+public/images/                  imagens originais da loja
+src/
+  app/
+    components/                 navegação e cartão de vinho
+    pages/                      início, catálogo, carrinho, pagamento e painel
+    services/                   catálogo/Supabase e carrinho com Signals
+    models/                     modelo de vinho
+    app.config.ts               Router e HttpClient
+    app.routes.ts               rotas da aplicação
+  environments/                 configuração do Supabase
+  main.ts
+  styles.css
+legacy-next/                    versão Next.js original preservada
 ```
 
-### 2. Instale as dependências
+## Divisão para três pessoas
 
-```bash
-npm install
-```
+A divisão acompanha o desenvolvimento em três rodadas. Em cada rodada, as três pessoas fazem uma parte do mesmo fluxo: alinham o modelo de dados e os templates, integram com a outra parte e revisam a tela completa.
 
-ou
+| Rodada | Pessoa 1 | Pessoa 2 | Pessoa 3 |
+| --- | --- | --- | --- |
+| Catálogo | Rotas e página de início | Cartão de vinho e template da coleção | Modelo, GET e carga pelo Supabase |
+| Carrinho | Botões de adicionar/remover nos cards | Estado com Signals e persistência local | Tela do carrinho, totais e navegação |
+| Finalização | Formulário e validações | Resumo do pedido e limpeza do carrinho | Conferência da integração, estilos e revisão do fluxo |
+| Painel de gestão | Formulário de novo vinho | POST e retorno da lista | DELETE, mensagens de estado e revisão conjunta |
 
-```bash
-yarn install
-```
+Para equilibrar o trabalho, troquem as áreas entre as rodadas. Cada pessoa deve revisar uma mudança feita por outra e participar da integração final. Os nomes das três pessoas podem ser colocados ao lado das colunas quando o grupo definir a ordem.
 
-### 3. Configure as variáveis de ambiente
+## Requisitos da atividade
 
-Crie um arquivo `.env.local`
-
-```env
-NEXT_PUBLIC_SUPABASE_URL=your_url
-NEXT_PUBLIC_SUPABASE_ANON_KEY=your_key
-```
-
-### 4. Execute o projeto
-
-```bash
-npm run dev
-```
-
-Acesse:
-
-```text
-http://localhost:3000
-```
-
----
-
-## 📌 Observações
-
-- Node.js 18+
-- Configure o Supabase antes de rodar
+- Angular standalone, componentes e templates externos.
+- Signals para estado dos vinhos e carrinho.
+- Rotas para início, catálogo, carrinho, pagamento e administração.
+- Formulários reativos no pagamento e cadastro de vinhos.
+- HttpClient com GET, POST e DELETE no Supabase.

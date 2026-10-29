@@ -1,0 +1,9 @@
+.topbar { position: sticky; top: 0; z-index: 20; background: #56070c; color: #fff; }
+.nav-inner { min-height: 74px; display:flex; align-items:center; justify-content:space-between; gap:1.5rem; }
+.brand { display:flex; align-items:center; gap:.65rem; color:#fff; text-decoration:none; letter-spacing:.14em; font-size:.78rem; }
+.brand-mark { width:36px; height:36px; border:1px solid #e8c7a3; border-radius:50%; display:grid; place-items:center; color:#e8c7a3; font: 1.4rem 'Ibarra Real Nova',serif; }
+nav { display:flex; align-items:center; gap:clamp(.8rem,3vw,2.2rem); }
+nav a { color:#f9ece9; text-decoration:none; font-size:.78rem; padding:.6rem 0; }
+nav a:hover, nav a.active { color:#e8c7a3; }
+.cart-count { display:inline-grid; place-items:center; min-width:19px; height:19px; background:#e8c7a3; color:#56070c; border-radius:50%; font-size:.68rem; }
+@media(max-width:560px) { .nav-inner { padding: .65rem 0; flex-direction:column; } nav { width:100%; justify-content:center; } }

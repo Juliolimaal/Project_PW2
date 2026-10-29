@@ -1,0 +1,43 @@
+<main class="page-wrap checkout-page">
+  @if (submitted()) {
+    <section class="confirmation">
+      <p class="section-kicker">Pedido recebido</p>
+      <h1>Obrigado pela compra.</h1>
+      <p>Esta etapa registra os dados do formulário apenas nesta demonstração. Nenhum pagamento real foi realizado.</p>
+      <a class="primary-button" routerLink="/vinhos">Voltar à coleção</a>
+    </section>
+  } @else if (cart.items().length === 0) {
+    <section class="confirmation">
+      <h1>Seu carrinho está vazio.</h1>
+      <a class="primary-button" routerLink="/vinhos">Escolher vinhos</a>
+    </section>
+  } @else {
+    <p class="section-kicker">Última etapa</p>
+    <h1>Finalizar pedido</h1>
+    <div class="checkout-layout">
+      <form [formGroup]="buyerForm" (ngSubmit)="finishOrder()" novalidate>
+        <label>Nome completo
+          <input type="text" formControlName="name" autocomplete="name">
+          @if (buyerForm.controls.name.touched && buyerForm.controls.name.invalid) { <small>Informe seu nome.</small> }
+        </label>
+        <label>E-mail
+          <input type="email" formControlName="email" autocomplete="email">
+          @if (buyerForm.controls.email.touched && buyerForm.controls.email.invalid) { <small>Informe um e-mail válido.</small> }
+        </label>
+        <label>Endereço para entrega
+          <textarea rows="3" formControlName="address" autocomplete="street-address"></textarea>
+          @if (buyerForm.controls.address.touched && buyerForm.controls.address.invalid) { <small>Informe o endereço.</small> }
+        </label>
+        <button class="primary-button" type="submit">Confirmar pedido</button>
+        <p class="form-note">Demonstração acadêmica: não informe dados de cartão.</p>
+      </form>
+      <aside class="order-summary">
+        <h2>Resumo</h2>
+        @for (item of cart.items(); track item.wine.id) {
+          <p>{{ item.quantity }} × {{ item.wine.name }} <strong>{{ item.wine.price * item.quantity | currency:'BRL':'symbol':'1.2-2':'pt-BR' }}</strong></p>
+        }
+        <div class="total"><span>Total</span><strong>{{ cart.total() | currency:'BRL':'symbol':'1.2-2':'pt-BR' }}</strong></div>
+      </aside>
+    </div>
+  }
+</main>

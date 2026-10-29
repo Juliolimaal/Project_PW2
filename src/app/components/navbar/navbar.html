@@ -1,0 +1,13 @@
+<header class="topbar">
+  <div class="page-wrap nav-inner">
+    <a class="brand" routerLink="/" aria-label="World Wines início">
+      <span class="brand-mark">W</span>
+      <span>WORLD <b>WINES</b></span>
+    </a>
+    <nav aria-label="Navegação principal">
+      <a routerLink="/" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active">Início</a>
+      <a routerLink="/vinhos" routerLinkActive="active">Vinhos</a>
+      <a routerLink="/carrinho" routerLinkActive="active">Carrinho <span class="cart-count">{{ cart.count() }}</span></a>
+    </nav>
+  </div>
+</header>
